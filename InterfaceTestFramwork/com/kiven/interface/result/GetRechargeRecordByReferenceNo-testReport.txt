@@ -1,0 +1,17 @@
+2014/07/31 14:14:51
+Request:
+{u'GetRechargeRecordByReferenceNoReq': {u'MerchantId': 'CTRP', u'ReferenceNo': u'', u'MerchantUid': 'wwwwww'}}
+
+Response:
+(GetRechargeRecordByReferenceNoRsp){
+   ResponseHeader = 
+      (ResponseHeader){
+         ResultCode = "91000114"
+         Description = "充值流水号不能为空！"
+      }
+   Amount = 0
+   MoneySource = 0
+   Status = 0
+ }
+
+

@@ -1,0 +1,1162 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://www.ctrip.com/cwallet/ws/tx" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="ITxServiceService" targetNamespace="http://www.ctrip.com/cwallet/ws/tx">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.ctrip.com/cwallet/ws/tx" elementFormDefault="unqualified" targetNamespace="http://www.ctrip.com/cwallet/ws/tx" version="1.0">
+
+  <xs:element name="CreateRechargeOrder" type="tns:CreateRechargeOrder"/>
+
+  <xs:element name="CreateRechargeOrderResponse" type="tns:CreateRechargeOrderResponse"/>
+
+  <xs:element name="GetRechargeRecordByReferenceNo" type="tns:GetRechargeRecordByReferenceNo"/>
+
+  <xs:element name="GetRechargeRecordByReferenceNoResponse" type="tns:GetRechargeRecordByReferenceNoResponse"/>
+
+  <xs:element name="GetWithdrawLimit" type="tns:GetWithdrawLimit"/>
+
+  <xs:element name="GetWithdrawLimitResponse" type="tns:GetWithdrawLimitResponse"/>
+
+  <xs:element name="GetWithdrawRecordByReferenceNo" type="tns:GetWithdrawRecordByReferenceNo"/>
+
+  <xs:element name="GetWithdrawRecordByReferenceNoResponse" type="tns:GetWithdrawRecordByReferenceNoResponse"/>
+
+  <xs:element name="PayCutAccount" type="tns:PayCutAccount"/>
+
+  <xs:element name="PayCutAccountResponse" type="tns:PayCutAccountResponse"/>
+
+  <xs:element name="PayFreezeAccount" type="tns:PayFreezeAccount"/>
+
+  <xs:element name="PayFreezeAccountResponse" type="tns:PayFreezeAccountResponse"/>
+
+  <xs:element name="PayRefundAccount" type="tns:PayRefundAccount"/>
+
+  <xs:element name="PayRefundAccountResponse" type="tns:PayRefundAccountResponse"/>
+
+  <xs:element name="PayUnfreezeAccount" type="tns:PayUnfreezeAccount"/>
+
+  <xs:element name="PayUnfreezeAccountResponse" type="tns:PayUnfreezeAccountResponse"/>
+
+  <xs:element name="QueryRechargeRecord" type="tns:QueryRechargeRecord"/>
+
+  <xs:element name="QueryRechargeRecordCount" type="tns:QueryRechargeRecordCount"/>
+
+  <xs:element name="QueryRechargeRecordCountResponse" type="tns:QueryRechargeRecordCountResponse"/>
+
+  <xs:element name="QueryRechargeRecordOverview" type="tns:QueryRechargeRecordOverview"/>
+
+  <xs:element name="QueryRechargeRecordOverviewResponse" type="tns:QueryRechargeRecordOverviewResponse"/>
+
+  <xs:element name="QueryRechargeRecordResponse" type="tns:QueryRechargeRecordResponse"/>
+
+  <xs:element name="QueryWithdrawRecord" type="tns:QueryWithdrawRecord"/>
+
+  <xs:element name="QueryWithdrawRecordCount" type="tns:QueryWithdrawRecordCount"/>
+
+  <xs:element name="QueryWithdrawRecordCountResponse" type="tns:QueryWithdrawRecordCountResponse"/>
+
+  <xs:element name="QueryWithdrawRecordOverview" type="tns:QueryWithdrawRecordOverview"/>
+
+  <xs:element name="QueryWithdrawRecordOverviewResponse" type="tns:QueryWithdrawRecordOverviewResponse"/>
+
+  <xs:element name="QueryWithdrawRecordResponse" type="tns:QueryWithdrawRecordResponse"/>
+
+  <xs:element name="SaveRechargeResult" type="tns:SaveRechargeResult"/>
+
+  <xs:element name="SaveRechargeResultResponse" type="tns:SaveRechargeResultResponse"/>
+
+  <xs:element name="WithdrawSubmit" type="tns:WithdrawSubmit"/>
+
+  <xs:element name="WithdrawSubmitByReferenceNo" type="tns:WithdrawSubmitByReferenceNo"/>
+
+  <xs:element name="WithdrawSubmitByReferenceNoResponse" type="tns:WithdrawSubmitByReferenceNoResponse"/>
+
+  <xs:element name="WithdrawSubmitResponse" type="tns:WithdrawSubmitResponse"/>
+
+  <xs:complexType name="GetWithdrawLimit">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GetWithdrawLimitReq" type="tns:GetWithdrawLimitReq"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetWithdrawLimitReq">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MerchantUid" type="xs:string"/>
+      <xs:element minOccurs="0" name="MerchantId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetWithdrawLimitResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GetWithdrawLimitRsp" type="tns:GetWithdrawLimitRsp"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetWithdrawLimitRsp">
+    <xs:complexContent>
+      <xs:extension base="tns:BaseRsp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="WithdrawLimitItems">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="WithdrawLimitItem" type="tns:WithdrawLimitItem"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="IsOverflow" type="xs:int"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="BaseRsp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ResponseHeader" type="tns:ResponseHeader"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WithdrawLimitItem">
+    <xs:sequence>
+      <xs:element name="LimitType" type="xs:int"/>
+      <xs:element name="LimitFlag" type="xs:int"/>
+      <xs:element name="TotalAmount" type="xs:long"/>
+      <xs:element name="RemainAmount" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ResponseHeader">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ResultCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="Description" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetWithdrawRecordByReferenceNo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GetWithdrawRecordByReferenceNoReq" type="tns:GetWithdrawRecordByReferenceNoReq"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetWithdrawRecordByReferenceNoReq">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MerchantUid" type="xs:string"/>
+      <xs:element minOccurs="0" name="MerchantId" type="xs:string"/>
+      <xs:element minOccurs="0" name="ReferenceNo" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetWithdrawRecordByReferenceNoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GetWithdrawRecordByReferenceNoRsp" type="tns:GetWithdrawRecordByReferenceNoRsp"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetWithdrawRecordByReferenceNoRsp">
+    <xs:complexContent>
+      <xs:extension base="tns:BaseRsp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ReferenceNo" type="xs:string"/>
+          <xs:element minOccurs="0" name="CreatedAt" type="xs:string"/>
+          <xs:element minOccurs="0" name="FinishedAt" type="xs:string"/>
+          <xs:element name="Currency" type="xs:int"/>
+          <xs:element name="Amount" type="xs:long"/>
+          <xs:element name="ServiceFee" type="xs:long"/>
+          <xs:element name="BankCardType" type="xs:int"/>
+          <xs:element minOccurs="0" name="BankCardTypeName" type="xs:string"/>
+          <xs:element minOccurs="0" name="BankCardNo" type="xs:string"/>
+          <xs:element minOccurs="0" name="BankAccountName" type="xs:string"/>
+          <xs:element name="CardBankId" type="xs:int"/>
+          <xs:element minOccurs="0" name="BankCode" type="xs:string"/>
+          <xs:element minOccurs="0" name="BankName" type="xs:string"/>
+          <xs:element minOccurs="0" name="BranchName" type="xs:string"/>
+          <xs:element minOccurs="0" name="SubBranchName" type="xs:string"/>
+          <xs:element name="IdType" type="xs:int"/>
+          <xs:element minOccurs="0" name="IdNo" type="xs:string"/>
+          <xs:element minOccurs="0" name="MobileNo" type="xs:string"/>
+          <xs:element name="Status" type="xs:int"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WithdrawSubmitByReferenceNo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="WithdrawSubmitByReferenceNoReq" type="tns:WithdrawSubmitByReferenceNoReq"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WithdrawSubmitByReferenceNoReq">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MerchantUid" type="xs:string"/>
+      <xs:element minOccurs="0" name="MerchantId" type="xs:string"/>
+      <xs:element minOccurs="0" name="WithdrawReferenceNo" type="xs:string"/>
+      <xs:element name="IsTerminate" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WithdrawSubmitByReferenceNoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="WithdrawSubmitByReferenceNoRsp" type="tns:WithdrawSubmitByReferenceNoRsp"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WithdrawSubmitByReferenceNoRsp">
+    <xs:complexContent>
+      <xs:extension base="tns:BaseRsp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="WithdrawReferenceNo" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="QueryRechargeRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="QueryRechargeRecordReq" type="tns:QueryRechargeRecordReq"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="QueryRechargeRecordReq">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MerchantUid" type="xs:string"/>
+      <xs:element minOccurs="0" name="MerchantId" type="xs:string"/>
+      <xs:element minOccurs="0" name="QueryMonth" type="xs:string"/>
+      <xs:element minOccurs="0" name="ReferenceNo" type="xs:string"/>
+      <xs:element name="Status" type="xs:int"/>
+      <xs:element name="Page" type="xs:int"/>
+      <xs:element name="RowsPerPage" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="QueryRechargeRecordResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="QueryRechargeRecordRsp" type="tns:QueryRechargeRecordRsp"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="QueryRechargeRecordRsp">
+    <xs:complexContent>
+      <xs:extension base="tns:BaseRsp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RechargeRecordItems">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="RechargeRecordItem" type="tns:RechargeRecordItem"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="RechargeRecordItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ReferenceNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="CreatedAt" type="xs:string"/>
+      <xs:element minOccurs="0" name="FinishedAt" type="xs:string"/>
+      <xs:element name="Amount" type="xs:long"/>
+      <xs:element name="MoneySource" type="xs:int"/>
+      <xs:element minOccurs="0" name="MoneySourceName" type="xs:string"/>
+      <xs:element name="Status" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PayCutAccount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PayCutAccountReq" type="tns:PayCutAccountReq"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PayCutAccountReq">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FrozenReferenceNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="ReferenceNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="MerchantId" type="xs:string"/>
+      <xs:element minOccurs="0" name="RequestTime" type="xs:string"/>
+      <xs:element name="Amount" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PayCutAccountResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PayCutAccountRsp" type="tns:PayCutAccountRsp"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PayCutAccountRsp">
+    <xs:complexContent>
+      <xs:extension base="tns:BaseRsp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CutReferenceNo" type="xs:string"/>
+          <xs:element minOccurs="0" name="ReferenceNo" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="QueryRechargeRecordOverview">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="QueryRechargeRecordOverviewReq" type="tns:QueryRechargeRecordOverviewReq"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="QueryRechargeRecordOverviewReq">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MerchantUid" type="xs:string"/>
+      <xs:element minOccurs="0" name="MerchantId" type="xs:string"/>
+      <xs:element minOccurs="0" name="QueryMonth" type="xs:string"/>
+      <xs:element minOccurs="0" name="ReferenceNo" type="xs:string"/>
+      <xs:element name="Status" type="xs:int"/>
+      <xs:element minOccurs="0" name="LastReferenceNo" type="xs:string"/>
+      <xs:element name="RowsPerPage" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="QueryRechargeRecordOverviewResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="QueryRechargeRecordOverviewRsp" type="tns:QueryRechargeRecordOverviewRsp"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="QueryRechargeRecordOverviewRsp">
+    <xs:complexContent>
+      <xs:extension base="tns:BaseRsp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RechargeRecordItems">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="RechargeRecordItem" type="tns:RechargeRecordItem"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="PayUnfreezeAccount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PayUnfreezeAccountReq" type="tns:PayUnfreezeAccountReq"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PayUnfreezeAccountReq">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FrozenReferenceNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="ReferenceNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="MerchantId" type="xs:string"/>
+      <xs:element minOccurs="0" name="RequestTime" type="xs:string"/>
+      <xs:element name="Amount" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PayUnfreezeAccountResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PayUnfreezeAccountRsp" type="tns:PayUnfreezeAccountRsp"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PayUnfreezeAccountRsp">
+    <xs:complexContent>
+      <xs:extension base="tns:BaseRsp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="UnfrozenReferenceNo" type="xs:string"/>
+          <xs:element minOccurs="0" name="ReferenceNo" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="PayFreezeAccount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PayFreezeAccountReq" type="tns:PayFreezeAccountReq"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PayFreezeAccountReq">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MerchantUid" type="xs:string"/>
+      <xs:element minOccurs="0" name="MerchantId" type="xs:string"/>
+      <xs:element minOccurs="0" name="ReferenceNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="ItemName" type="xs:string"/>
+      <xs:element minOccurs="0" name="ItemDesc" type="xs:string"/>
+      <xs:element minOccurs="0" name="RequestTime" type="xs:string"/>
+      <xs:element name="Amount" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PayFreezeAccountResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PayFreezeAccountRsp" type="tns:PayFreezeAccountRsp"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PayFreezeAccountRsp">
+    <xs:complexContent>
+      <xs:extension base="tns:BaseRsp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FrozenReferenceNo" type="xs:string"/>
+          <xs:element minOccurs="0" name="ReferenceNo" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="GetRechargeRecordByReferenceNo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GetRechargeRecordByReferenceNoReq" type="tns:GetRechargeRecordByReferenceNoReq"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetRechargeRecordByReferenceNoReq">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MerchantUid" type="xs:string"/>
+      <xs:element minOccurs="0" name="MerchantId" type="xs:string"/>
+      <xs:element minOccurs="0" name="ReferenceNo" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetRechargeRecordByReferenceNoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GetRechargeRecordByReferenceNoRsp" type="tns:GetRechargeRecordByReferenceNoRsp"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetRechargeRecordByReferenceNoRsp">
+    <xs:complexContent>
+      <xs:extension base="tns:BaseRsp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ReferenceNo" type="xs:string"/>
+          <xs:element minOccurs="0" name="CreatedAt" type="xs:string"/>
+          <xs:element minOccurs="0" name="FinishedAt" type="xs:string"/>
+          <xs:element name="Amount" type="xs:long"/>
+          <xs:element name="MoneySource" type="xs:int"/>
+          <xs:element minOccurs="0" name="MoneySourceName" type="xs:string"/>
+          <xs:element name="Status" type="xs:int"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WithdrawSubmit">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="WithdrawSubmitReq" type="tns:WithdrawSubmitReq"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WithdrawSubmitReq">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MerchantUid" type="xs:string"/>
+      <xs:element minOccurs="0" name="MerchantId" type="xs:string"/>
+      <xs:element name="Currency" type="xs:int"/>
+      <xs:element name="Amount" type="xs:long"/>
+      <xs:element minOccurs="0" name="RequestTime" type="xs:string"/>
+      <xs:element minOccurs="0" name="WithdrawCardId" type="xs:string"/>
+      <xs:element name="BankCardType" type="xs:int"/>
+      <xs:element minOccurs="0" name="BankCardNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="BankAccountName" type="xs:string"/>
+      <xs:element name="CardBankId" type="xs:int"/>
+      <xs:element minOccurs="0" name="BankCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="BranchName" type="xs:string"/>
+      <xs:element minOccurs="0" name="SubBranchName" type="xs:string"/>
+      <xs:element name="IdType" type="xs:int"/>
+      <xs:element minOccurs="0" name="IdNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="MobileNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="UserIp" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WithdrawSubmitResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="WithdrawSubmitRsp" type="tns:WithdrawSubmitRsp"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="WithdrawSubmitRsp">
+    <xs:complexContent>
+      <xs:extension base="tns:BaseRsp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="WithdrawReferenceNo" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="QueryWithdrawRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="QueryWithdrawRecordReq" type="tns:QueryWithdrawRecordReq"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="QueryWithdrawRecordReq">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MerchantUid" type="xs:string"/>
+      <xs:element minOccurs="0" name="MerchantId" type="xs:string"/>
+      <xs:element minOccurs="0" name="QueryMonth" type="xs:string"/>
+      <xs:element minOccurs="0" name="BankCardNo" type="xs:string"/>
+      <xs:element name="CardBankId" type="xs:int"/>
+      <xs:element minOccurs="0" name="BankCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="ReferenceNo" type="xs:string"/>
+      <xs:element name="Status" type="xs:int"/>
+      <xs:element name="Page" type="xs:int"/>
+      <xs:element name="RowsPerPage" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="QueryWithdrawRecordResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="QueryWithdrawRecordRsp" type="tns:QueryWithdrawRecordRsp"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="QueryWithdrawRecordRsp">
+    <xs:complexContent>
+      <xs:extension base="tns:BaseRsp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="WithdrawRecordItems">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="WithdrawRecordItem" type="tns:WithdrawRecordItem"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WithdrawRecordItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ReferenceNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="CreatedAt" type="xs:string"/>
+      <xs:element minOccurs="0" name="FinishedAt" type="xs:string"/>
+      <xs:element name="Currency" type="xs:int"/>
+      <xs:element name="Amount" type="xs:long"/>
+      <xs:element name="ServiceFee" type="xs:long"/>
+      <xs:element name="BankCardType" type="xs:int"/>
+      <xs:element minOccurs="0" name="BankCardTypeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="BankCardNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="BankAccountName" type="xs:string"/>
+      <xs:element name="CardBankId" type="xs:int"/>
+      <xs:element minOccurs="0" name="BankCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="BankName" type="xs:string"/>
+      <xs:element minOccurs="0" name="BranchName" type="xs:string"/>
+      <xs:element minOccurs="0" name="SubBranchName" type="xs:string"/>
+      <xs:element name="IdType" type="xs:int"/>
+      <xs:element minOccurs="0" name="IdNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="MobileNo" type="xs:string"/>
+      <xs:element name="Status" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="QueryRechargeRecordCount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="QueryRechargeRecordCountReq" type="tns:QueryRechargeRecordCountReq"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="QueryRechargeRecordCountReq">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MerchantUid" type="xs:string"/>
+      <xs:element minOccurs="0" name="MerchantId" type="xs:string"/>
+      <xs:element minOccurs="0" name="QueryMonth" type="xs:string"/>
+      <xs:element minOccurs="0" name="ReferenceNo" type="xs:string"/>
+      <xs:element name="Status" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="QueryRechargeRecordCountResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="QueryRechargeRecordCountRsp" type="tns:QueryRechargeRecordCountRsp"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="QueryRechargeRecordCountRsp">
+    <xs:complexContent>
+      <xs:extension base="tns:BaseRsp">
+        <xs:sequence>
+          <xs:element name="TotalCount" type="xs:int"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="QueryWithdrawRecordCount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="QueryWithdrawRecordCountReq" type="tns:QueryWithdrawRecordCountReq"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="QueryWithdrawRecordCountReq">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MerchantUid" type="xs:string"/>
+      <xs:element minOccurs="0" name="MerchantId" type="xs:string"/>
+      <xs:element minOccurs="0" name="QueryMonth" type="xs:string"/>
+      <xs:element minOccurs="0" name="BankCardNo" type="xs:string"/>
+      <xs:element name="CardBankId" type="xs:int"/>
+      <xs:element minOccurs="0" name="BankCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="ReferenceNo" type="xs:string"/>
+      <xs:element name="Status" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="QueryWithdrawRecordCountResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="QueryWithdrawRecordCountRsp" type="tns:QueryWithdrawRecordCountRsp"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="QueryWithdrawRecordCountRsp">
+    <xs:complexContent>
+      <xs:extension base="tns:BaseRsp">
+        <xs:sequence>
+          <xs:element name="TotalCount" type="xs:int"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="QueryWithdrawRecordOverview">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="QueryWithdrawRecordOverviewReq" type="tns:QueryWithdrawRecordOverviewReq"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="QueryWithdrawRecordOverviewReq">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MerchantUid" type="xs:string"/>
+      <xs:element minOccurs="0" name="MerchantId" type="xs:string"/>
+      <xs:element minOccurs="0" name="QueryMonth" type="xs:string"/>
+      <xs:element minOccurs="0" name="BankCardNo" type="xs:string"/>
+      <xs:element name="CardBankId" type="xs:int"/>
+      <xs:element minOccurs="0" name="BankCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="ReferenceNo" type="xs:string"/>
+      <xs:element name="Status" type="xs:int"/>
+      <xs:element minOccurs="0" name="LastReferenceNo" type="xs:string"/>
+      <xs:element name="RowsPerPage" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="QueryWithdrawRecordOverviewResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="QueryWithdrawRecordOverviewRsp" type="tns:QueryWithdrawRecordOverviewRsp"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="QueryWithdrawRecordOverviewRsp">
+    <xs:complexContent>
+      <xs:extension base="tns:BaseRsp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="WithdrawRecordItems">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="WithdrawRecordItem" type="tns:WithdrawRecordItem"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="CreateRechargeOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreateRechargeOrderReq" type="tns:CreateRechargeOrderReq"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CreateRechargeOrderReq">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MerchantUid" type="xs:string"/>
+      <xs:element minOccurs="0" name="MerchantId" type="xs:string"/>
+      <xs:element minOccurs="0" name="RequestTime" type="xs:string"/>
+      <xs:element name="Amount" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CreateRechargeOrderResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreateRechargeOrderRsp" type="tns:CreateRechargeOrderRsp"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CreateRechargeOrderRsp">
+    <xs:complexContent>
+      <xs:extension base="tns:BaseRsp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RechargeReferenceNo" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="PayRefundAccount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PayRefundAccountReq" type="tns:PayRefundAccountReq"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PayRefundAccountReq">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FrozenReferenceNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="ReferenceNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="MerchantId" type="xs:string"/>
+      <xs:element minOccurs="0" name="RequestTime" type="xs:string"/>
+      <xs:element name="Amount" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PayRefundAccountResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PayRefundAccountRsp" type="tns:PayRefundAccountRsp"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PayRefundAccountRsp">
+    <xs:complexContent>
+      <xs:extension base="tns:BaseRsp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RefundReferenceNo" type="xs:string"/>
+          <xs:element minOccurs="0" name="ReferenceNo" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="SaveRechargeResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SaveRechargeResultReq" type="tns:SaveRechargeResultReq"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SaveRechargeResultReq">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GwPayReferenceNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="RechargeReferenceNo" type="xs:string"/>
+      <xs:element name="Status" type="xs:int"/>
+      <xs:element minOccurs="0" name="PaymentWay" type="xs:string"/>
+      <xs:element minOccurs="0" name="MerchantData" type="xs:string"/>
+      <xs:element minOccurs="0" name="RequestTime" type="xs:string"/>
+      <xs:element name="Amount" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SaveRechargeResultResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SaveRechargeResultRsp" type="tns:SaveRechargeResultRsp"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SaveRechargeResultRsp">
+    <xs:complexContent>
+      <xs:extension base="tns:BaseRsp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="GwPayReferenceNo" type="xs:string"/>
+          <xs:element minOccurs="0" name="RechargeReferenceNo" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="PayFreezeAccountResponse">
+    <wsdl:part element="tns:PayFreezeAccountResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="QueryWithdrawRecordResponse">
+    <wsdl:part element="tns:QueryWithdrawRecordResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="QueryRechargeRecordResponse">
+    <wsdl:part element="tns:QueryRechargeRecordResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetWithdrawRecordByReferenceNo">
+    <wsdl:part element="tns:GetWithdrawRecordByReferenceNo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WithdrawSubmitResponse">
+    <wsdl:part element="tns:WithdrawSubmitResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetRechargeRecordByReferenceNo">
+    <wsdl:part element="tns:GetRechargeRecordByReferenceNo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WithdrawSubmitByReferenceNoResponse">
+    <wsdl:part element="tns:WithdrawSubmitByReferenceNoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WithdrawSubmitByReferenceNo">
+    <wsdl:part element="tns:WithdrawSubmitByReferenceNo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="QueryWithdrawRecordOverview">
+    <wsdl:part element="tns:QueryWithdrawRecordOverview" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="QueryWithdrawRecordOverviewResponse">
+    <wsdl:part element="tns:QueryWithdrawRecordOverviewResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SaveRechargeResultResponse">
+    <wsdl:part element="tns:SaveRechargeResultResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CreateRechargeOrderResponse">
+    <wsdl:part element="tns:CreateRechargeOrderResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="PayCutAccount">
+    <wsdl:part element="tns:PayCutAccount" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetWithdrawLimit">
+    <wsdl:part element="tns:GetWithdrawLimit" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CreateRechargeOrder">
+    <wsdl:part element="tns:CreateRechargeOrder" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="QueryRechargeRecordCountResponse">
+    <wsdl:part element="tns:QueryRechargeRecordCountResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="QueryWithdrawRecordCount">
+    <wsdl:part element="tns:QueryWithdrawRecordCount" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="QueryWithdrawRecordCountResponse">
+    <wsdl:part element="tns:QueryWithdrawRecordCountResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="PayUnfreezeAccount">
+    <wsdl:part element="tns:PayUnfreezeAccount" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="QueryRechargeRecord">
+    <wsdl:part element="tns:QueryRechargeRecord" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetWithdrawRecordByReferenceNoResponse">
+    <wsdl:part element="tns:GetWithdrawRecordByReferenceNoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="PayUnfreezeAccountResponse">
+    <wsdl:part element="tns:PayUnfreezeAccountResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="PayCutAccountResponse">
+    <wsdl:part element="tns:PayCutAccountResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="PayFreezeAccount">
+    <wsdl:part element="tns:PayFreezeAccount" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WithdrawSubmit">
+    <wsdl:part element="tns:WithdrawSubmit" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="QueryRechargeRecordOverviewResponse">
+    <wsdl:part element="tns:QueryRechargeRecordOverviewResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="QueryRechargeRecordCount">
+    <wsdl:part element="tns:QueryRechargeRecordCount" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="QueryWithdrawRecord">
+    <wsdl:part element="tns:QueryWithdrawRecord" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="QueryRechargeRecordOverview">
+    <wsdl:part element="tns:QueryRechargeRecordOverview" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetRechargeRecordByReferenceNoResponse">
+    <wsdl:part element="tns:GetRechargeRecordByReferenceNoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SaveRechargeResult">
+    <wsdl:part element="tns:SaveRechargeResult" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="PayRefundAccountResponse">
+    <wsdl:part element="tns:PayRefundAccountResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="PayRefundAccount">
+    <wsdl:part element="tns:PayRefundAccount" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetWithdrawLimitResponse">
+    <wsdl:part element="tns:GetWithdrawLimitResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ITxService">
+    <wsdl:operation name="GetWithdrawLimit">
+      <wsdl:input message="tns:GetWithdrawLimit" name="GetWithdrawLimit">
+    </wsdl:input>
+      <wsdl:output message="tns:GetWithdrawLimitResponse" name="GetWithdrawLimitResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWithdrawRecordByReferenceNo">
+      <wsdl:input message="tns:GetWithdrawRecordByReferenceNo" name="GetWithdrawRecordByReferenceNo">
+    </wsdl:input>
+      <wsdl:output message="tns:GetWithdrawRecordByReferenceNoResponse" name="GetWithdrawRecordByReferenceNoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WithdrawSubmitByReferenceNo">
+      <wsdl:input message="tns:WithdrawSubmitByReferenceNo" name="WithdrawSubmitByReferenceNo">
+    </wsdl:input>
+      <wsdl:output message="tns:WithdrawSubmitByReferenceNoResponse" name="WithdrawSubmitByReferenceNoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRechargeRecord">
+      <wsdl:input message="tns:QueryRechargeRecord" name="QueryRechargeRecord">
+    </wsdl:input>
+      <wsdl:output message="tns:QueryRechargeRecordResponse" name="QueryRechargeRecordResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PayCutAccount">
+      <wsdl:input message="tns:PayCutAccount" name="PayCutAccount">
+    </wsdl:input>
+      <wsdl:output message="tns:PayCutAccountResponse" name="PayCutAccountResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRechargeRecordOverview">
+      <wsdl:input message="tns:QueryRechargeRecordOverview" name="QueryRechargeRecordOverview">
+    </wsdl:input>
+      <wsdl:output message="tns:QueryRechargeRecordOverviewResponse" name="QueryRechargeRecordOverviewResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PayUnfreezeAccount">
+      <wsdl:input message="tns:PayUnfreezeAccount" name="PayUnfreezeAccount">
+    </wsdl:input>
+      <wsdl:output message="tns:PayUnfreezeAccountResponse" name="PayUnfreezeAccountResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PayFreezeAccount">
+      <wsdl:input message="tns:PayFreezeAccount" name="PayFreezeAccount">
+    </wsdl:input>
+      <wsdl:output message="tns:PayFreezeAccountResponse" name="PayFreezeAccountResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRechargeRecordByReferenceNo">
+      <wsdl:input message="tns:GetRechargeRecordByReferenceNo" name="GetRechargeRecordByReferenceNo">
+    </wsdl:input>
+      <wsdl:output message="tns:GetRechargeRecordByReferenceNoResponse" name="GetRechargeRecordByReferenceNoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WithdrawSubmit">
+      <wsdl:input message="tns:WithdrawSubmit" name="WithdrawSubmit">
+    </wsdl:input>
+      <wsdl:output message="tns:WithdrawSubmitResponse" name="WithdrawSubmitResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryWithdrawRecord">
+      <wsdl:input message="tns:QueryWithdrawRecord" name="QueryWithdrawRecord">
+    </wsdl:input>
+      <wsdl:output message="tns:QueryWithdrawRecordResponse" name="QueryWithdrawRecordResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRechargeRecordCount">
+      <wsdl:input message="tns:QueryRechargeRecordCount" name="QueryRechargeRecordCount">
+    </wsdl:input>
+      <wsdl:output message="tns:QueryRechargeRecordCountResponse" name="QueryRechargeRecordCountResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryWithdrawRecordCount">
+      <wsdl:input message="tns:QueryWithdrawRecordCount" name="QueryWithdrawRecordCount">
+    </wsdl:input>
+      <wsdl:output message="tns:QueryWithdrawRecordCountResponse" name="QueryWithdrawRecordCountResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryWithdrawRecordOverview">
+      <wsdl:input message="tns:QueryWithdrawRecordOverview" name="QueryWithdrawRecordOverview">
+    </wsdl:input>
+      <wsdl:output message="tns:QueryWithdrawRecordOverviewResponse" name="QueryWithdrawRecordOverviewResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateRechargeOrder">
+      <wsdl:input message="tns:CreateRechargeOrder" name="CreateRechargeOrder">
+    </wsdl:input>
+      <wsdl:output message="tns:CreateRechargeOrderResponse" name="CreateRechargeOrderResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PayRefundAccount">
+      <wsdl:input message="tns:PayRefundAccount" name="PayRefundAccount">
+    </wsdl:input>
+      <wsdl:output message="tns:PayRefundAccountResponse" name="PayRefundAccountResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveRechargeResult">
+      <wsdl:input message="tns:SaveRechargeResult" name="SaveRechargeResult">
+    </wsdl:input>
+      <wsdl:output message="tns:SaveRechargeResultResponse" name="SaveRechargeResultResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ITxServiceServiceSoapBinding" type="tns:ITxService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetWithdrawLimit">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="GetWithdrawLimit">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GetWithdrawLimitResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWithdrawRecordByReferenceNo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="GetWithdrawRecordByReferenceNo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GetWithdrawRecordByReferenceNoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRechargeRecord">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="QueryRechargeRecord">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="QueryRechargeRecordResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WithdrawSubmitByReferenceNo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WithdrawSubmitByReferenceNo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WithdrawSubmitByReferenceNoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PayCutAccount">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="PayCutAccount">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="PayCutAccountResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PayFreezeAccount">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="PayFreezeAccount">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="PayFreezeAccountResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PayUnfreezeAccount">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="PayUnfreezeAccount">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="PayUnfreezeAccountResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRechargeRecordOverview">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="QueryRechargeRecordOverview">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="QueryRechargeRecordOverviewResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRechargeRecordByReferenceNo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="GetRechargeRecordByReferenceNo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GetRechargeRecordByReferenceNoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryWithdrawRecord">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="QueryWithdrawRecord">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="QueryWithdrawRecordResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WithdrawSubmit">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="WithdrawSubmit">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="WithdrawSubmitResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRechargeRecordCount">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="QueryRechargeRecordCount">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="QueryRechargeRecordCountResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryWithdrawRecordCount">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="QueryWithdrawRecordCount">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="QueryWithdrawRecordCountResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryWithdrawRecordOverview">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="QueryWithdrawRecordOverview">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="QueryWithdrawRecordOverviewResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateRechargeOrder">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="CreateRechargeOrder">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CreateRechargeOrderResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PayRefundAccount">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="PayRefundAccount">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="PayRefundAccountResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveRechargeResult">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="SaveRechargeResult">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="SaveRechargeResultResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ITxServiceService">
+    <wsdl:port binding="tns:ITxServiceServiceSoapBinding" name="ITxServicePort">
+      <soap:address location="http://10.2.6.244/tx_ws/services/TxService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

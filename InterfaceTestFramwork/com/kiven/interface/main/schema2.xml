@@ -1,0 +1,901 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://www.ctrip.com/cwallet/ws/account" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="IAccountServiceService" targetNamespace="http://www.ctrip.com/cwallet/ws/account">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.ctrip.com/cwallet/ws/account" elementFormDefault="unqualified" targetNamespace="http://www.ctrip.com/cwallet/ws/account" version="1.0">
+
+  <xs:element name="CheckCtripUserPassword" type="tns:CheckCtripUserPassword"/>
+
+  <xs:element name="CheckCtripUserPasswordResponse" type="tns:CheckCtripUserPasswordResponse"/>
+
+  <xs:element name="FreezeUser" type="tns:FreezeUser"/>
+
+  <xs:element name="FreezeUserResponse" type="tns:FreezeUserResponse"/>
+
+  <xs:element name="GetAccountByMerchant" type="tns:GetAccountByMerchant"/>
+
+  <xs:element name="GetAccountByMerchantResponse" type="tns:GetAccountByMerchantResponse"/>
+
+  <xs:element name="GetCtripUserInfo" type="tns:GetCtripUserInfo"/>
+
+  <xs:element name="GetCtripUserInfoResponse" type="tns:GetCtripUserInfoResponse"/>
+
+  <xs:element name="GetPaymentDetailByReferenceNo" type="tns:GetPaymentDetailByReferenceNo"/>
+
+  <xs:element name="GetPaymentDetailByReferenceNoResponse" type="tns:GetPaymentDetailByReferenceNoResponse"/>
+
+  <xs:element name="GetUserByMerchant" type="tns:GetUserByMerchant"/>
+
+  <xs:element name="GetUserByMerchantResponse" type="tns:GetUserByMerchantResponse"/>
+
+  <xs:element name="IsInWhiteList" type="tns:IsInWhiteList"/>
+
+  <xs:element name="IsInWhiteListResponse" type="tns:IsInWhiteListResponse"/>
+
+  <xs:element name="QueryPaymentDetail" type="tns:QueryPaymentDetail"/>
+
+  <xs:element name="QueryPaymentDetailCount" type="tns:QueryPaymentDetailCount"/>
+
+  <xs:element name="QueryPaymentDetailCountResponse" type="tns:QueryPaymentDetailCountResponse"/>
+
+  <xs:element name="QueryPaymentDetailOverview" type="tns:QueryPaymentDetailOverview"/>
+
+  <xs:element name="QueryPaymentDetailOverviewResponse" type="tns:QueryPaymentDetailOverviewResponse"/>
+
+  <xs:element name="QueryPaymentDetailResponse" type="tns:QueryPaymentDetailResponse"/>
+
+  <xs:element name="QueryWithdrawCard" type="tns:QueryWithdrawCard"/>
+
+  <xs:element name="QueryWithdrawCardResponse" type="tns:QueryWithdrawCardResponse"/>
+
+  <xs:element name="UnfreezeUser" type="tns:UnfreezeUser"/>
+
+  <xs:element name="UnfreezeUserResponse" type="tns:UnfreezeUserResponse"/>
+
+  <xs:element name="VerifyBankCardNo" type="tns:VerifyBankCardNo"/>
+
+  <xs:element name="VerifyBankCardNoResponse" type="tns:VerifyBankCardNoResponse"/>
+
+  <xs:complexType name="VerifyBankCardNo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="VerifyBankCardNoReq" type="tns:VerifyBankCardNoReq"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="VerifyBankCardNoReq">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BankCardNo" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="VerifyBankCardNoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="VerifyBankCardNoRsp" type="tns:VerifyBankCardNoRsp"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="VerifyBankCardNoRsp">
+    <xs:complexContent>
+      <xs:extension base="tns:BaseRsp">
+        <xs:sequence>
+          <xs:element name="Flag" type="xs:int"/>
+          <xs:element minOccurs="0" name="BankCardTypeItems">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="BankCardTypeItem" type="tns:BankCardTypeItem"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="BaseRsp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ResponseHeader" type="tns:ResponseHeader"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="BankCardTypeItem">
+    <xs:sequence>
+      <xs:element name="CardBankId" type="xs:int"/>
+      <xs:element name="BankCardType" type="xs:int"/>
+      <xs:element minOccurs="0" name="BankCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="BankName" type="xs:string"/>
+      <xs:element name="IsNeedIdType" type="xs:int"/>
+      <xs:element name="IsNeedIdNo" type="xs:int"/>
+      <xs:element name="IsNeedIdName" type="xs:int"/>
+      <xs:element name="IsNeedVerifyNo" type="xs:int"/>
+      <xs:element name="IsNeedForeignCardExtend" type="xs:int"/>
+      <xs:element name="IsNeedMobileNo" type="xs:int"/>
+      <xs:element name="IsInternationalCard" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ResponseHeader">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ResultCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="Description" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="QueryWithdrawCard">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="QueryWithdrawCardReq" type="tns:QueryWithdrawCardReq"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="QueryWithdrawCardReq">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MerchantUid" type="xs:string"/>
+      <xs:element minOccurs="0" name="MerchantId" type="xs:string"/>
+      <xs:element name="Status" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="QueryWithdrawCardResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="QueryWithdrawCardRsp" type="tns:QueryWithdrawCardRsp"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="QueryWithdrawCardRsp">
+    <xs:complexContent>
+      <xs:extension base="tns:BaseRsp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="WithdrawCardItems">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="WithdrawCardItem" type="tns:WithdrawCardItem"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="WithdrawCardItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:string"/>
+      <xs:element name="BankCardType" type="xs:int"/>
+      <xs:element minOccurs="0" name="BankCardTypeName" type="xs:string"/>
+      <xs:element minOccurs="0" name="BankCardNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="BankAccountName" type="xs:string"/>
+      <xs:element name="CardBankId" type="xs:int"/>
+      <xs:element minOccurs="0" name="BankCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="BankName" type="xs:string"/>
+      <xs:element minOccurs="0" name="BranchName" type="xs:string"/>
+      <xs:element minOccurs="0" name="SubBranchName" type="xs:string"/>
+      <xs:element name="IdType" type="xs:int"/>
+      <xs:element minOccurs="0" name="IdNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="MobileNo" type="xs:string"/>
+      <xs:element name="Status" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="QueryPaymentDetailOverview">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="QueryPaymentDetailOverviewReq" type="tns:QueryPaymentDetailOverviewReq"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="QueryPaymentDetailOverviewReq">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MerchantUid" type="xs:string"/>
+      <xs:element minOccurs="0" name="MerchantId" type="xs:string"/>
+      <xs:element minOccurs="0" name="QueryMonth" type="xs:string"/>
+      <xs:element name="MoneyFlows" type="xs:int"/>
+      <xs:element name="MoneySource" type="xs:int"/>
+      <xs:element minOccurs="0" name="LastReferenceNo" type="xs:string"/>
+      <xs:element name="RowsPerPage" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="QueryPaymentDetailOverviewResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="QueryPaymentDetailOverviewRsp" type="tns:QueryPaymentDetailOverviewRsp"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="QueryPaymentDetailOverviewRsp">
+    <xs:complexContent>
+      <xs:extension base="tns:BaseRsp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="PaymentDetailItems">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="PaymentDetailItem" type="tns:PaymentDetailItem"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="PaymentDetailItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ReferenceNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="CreatedAt" type="xs:string"/>
+      <xs:element name="BillType" type="xs:int"/>
+      <xs:element minOccurs="0" name="BillName" type="xs:string"/>
+      <xs:element minOccurs="0" name="ItemName" type="xs:string"/>
+      <xs:element minOccurs="0" name="ItemDesc" type="xs:string"/>
+      <xs:element name="MoneyFlows" type="xs:int"/>
+      <xs:element name="Amount" type="xs:long"/>
+      <xs:element name="MoneySource" type="xs:int"/>
+      <xs:element minOccurs="0" name="MoneySourceName" type="xs:string"/>
+      <xs:element name="AccBalance" type="xs:long"/>
+      <xs:element name="AccTotalBalance" type="xs:long"/>
+      <xs:element name="AccPayOnlyBalance" type="xs:long"/>
+      <xs:element name="AccFrozenBalance" type="xs:long"/>
+      <xs:element name="AccWithdrawBalance" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="QueryPaymentDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="QueryPaymentDetailReq" type="tns:QueryPaymentDetailReq"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="QueryPaymentDetailReq">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MerchantUid" type="xs:string"/>
+      <xs:element minOccurs="0" name="MerchantId" type="xs:string"/>
+      <xs:element minOccurs="0" name="QueryMonth" type="xs:string"/>
+      <xs:element minOccurs="0" name="ReferenceNo" type="xs:string"/>
+      <xs:element name="MoneyFlows" type="xs:int"/>
+      <xs:element name="MoneySource" type="xs:int"/>
+      <xs:element name="Page" type="xs:int"/>
+      <xs:element name="RowsPerPage" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="QueryPaymentDetailResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="QueryPaymentDetailRsp" type="tns:QueryPaymentDetailRsp"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="QueryPaymentDetailRsp">
+    <xs:complexContent>
+      <xs:extension base="tns:BaseRsp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="PaymentDetailItems">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="PaymentDetailItem" type="tns:PaymentDetailItem"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="GetUserByMerchant">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GetUserByMerchantReq" type="tns:GetUserByMerchantReq"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetUserByMerchantReq">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MerchantUid" type="xs:string"/>
+      <xs:element minOccurs="0" name="MerchantId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetUserByMerchantResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GetUserByMerchantRsp" type="tns:GetUserByMerchantRsp"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetUserByMerchantRsp">
+    <xs:complexContent>
+      <xs:extension base="tns:BaseRsp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" type="xs:string"/>
+          <xs:element minOccurs="0" name="Name" type="xs:string"/>
+          <xs:element minOccurs="0" name="AliasMobileNo" type="xs:string"/>
+          <xs:element minOccurs="0" name="AliasEmail" type="xs:string"/>
+          <xs:element minOccurs="0" name="ContactMobileNo" type="xs:string"/>
+          <xs:element minOccurs="0" name="ContactEmail" type="xs:string"/>
+          <xs:element minOccurs="0" name="ContactTelephone" type="xs:string"/>
+          <xs:element name="UserType" type="xs:int"/>
+          <xs:element name="Status" type="xs:int"/>
+          <xs:element name="IdType" type="xs:int"/>
+          <xs:element minOccurs="0" name="IdNo" type="xs:string"/>
+          <xs:element name="AuthStatus" type="xs:int"/>
+          <xs:element minOccurs="0" name="AuthenticatedAt" type="xs:string"/>
+          <xs:element name="SecurityLevel" type="xs:int"/>
+          <xs:element name="CreateType" type="xs:int"/>
+          <xs:element minOccurs="0" name="SourceMerchant" type="xs:string"/>
+          <xs:element minOccurs="0" name="SourceUid" type="xs:string"/>
+          <xs:element minOccurs="0" name="HeadImgUrl" type="xs:string"/>
+          <xs:element minOccurs="0" name="CreatedAt" type="xs:string"/>
+          <xs:element minOccurs="0" name="ActivatedAt" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="CheckCtripUserPassword">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CheckCtripUserPasswordReq" type="tns:CheckCtripUserPasswordReq"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CheckCtripUserPasswordReq">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Uid" type="xs:string"/>
+      <xs:element minOccurs="0" name="Password" type="xs:string"/>
+      <xs:element minOccurs="0" name="LoginType" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CheckCtripUserPasswordResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CheckCtripUserPasswordRsp" type="tns:CheckCtripUserPasswordRsp"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CheckCtripUserPasswordRsp">
+    <xs:complexContent>
+      <xs:extension base="tns:BaseRsp">
+        <xs:sequence>
+          <xs:element name="Retcode" type="xs:int"/>
+          <xs:element minOccurs="0" name="Result" type="xs:string"/>
+          <xs:element minOccurs="0" name="IsFirstTime" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="GetCtripUserInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GetCtripUserInfoReq" type="tns:GetCtripUserInfoReq"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetCtripUserInfoReq">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CtripUid" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetCtripUserInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GetCtripUserInfoRsp" type="tns:GetCtripUserInfoRsp"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetCtripUserInfoRsp">
+    <xs:complexContent>
+      <xs:extension base="tns:BaseRsp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" type="xs:string"/>
+          <xs:element minOccurs="0" name="BindedMobilePhone" type="xs:string"/>
+          <xs:element minOccurs="0" name="BindedEmail" type="xs:string"/>
+          <xs:element name="ReturnBalance" type="xs:long"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="GetPaymentDetailByReferenceNo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GetPaymentDetailByReferenceNoReq" type="tns:GetPaymentDetailByReferenceNoReq"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetPaymentDetailByReferenceNoReq">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MerchantUid" type="xs:string"/>
+      <xs:element minOccurs="0" name="MerchantId" type="xs:string"/>
+      <xs:element minOccurs="0" name="ReferenceNo" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetPaymentDetailByReferenceNoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GetPaymentDetailByReferenceNoRsp" type="tns:GetPaymentDetailByReferenceNoRsp"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetPaymentDetailByReferenceNoRsp">
+    <xs:complexContent>
+      <xs:extension base="tns:BaseRsp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ReferenceNo" type="xs:string"/>
+          <xs:element minOccurs="0" name="CreatedAt" type="xs:string"/>
+          <xs:element name="BillType" type="xs:int"/>
+          <xs:element minOccurs="0" name="BillName" type="xs:string"/>
+          <xs:element minOccurs="0" name="ItemName" type="xs:string"/>
+          <xs:element minOccurs="0" name="ItemDesc" type="xs:string"/>
+          <xs:element name="MoneyFlows" type="xs:int"/>
+          <xs:element name="Amount" type="xs:long"/>
+          <xs:element name="MoneySource" type="xs:int"/>
+          <xs:element minOccurs="0" name="MoneySourceName" type="xs:string"/>
+          <xs:element name="AccBalance" type="xs:long"/>
+          <xs:element name="AccTotalBalance" type="xs:long"/>
+          <xs:element name="AccPayOnlyBalance" type="xs:long"/>
+          <xs:element name="AccFrozenBalance" type="xs:long"/>
+          <xs:element name="AccWithdrawBalance" type="xs:long"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="UnfreezeUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="UnfreezeUserReq" type="tns:UnfreezeUserReq"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="UnfreezeUserReq">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="UserId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="UnfreezeUserResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="UnfreezeUserRsp" type="tns:UnfreezeUserRsp"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="UnfreezeUserRsp">
+    <xs:complexContent>
+      <xs:extension base="tns:BaseRsp">
+        <xs:sequence>
+          <xs:element name="UnfrozenId" type="xs:long"/>
+          <xs:element minOccurs="0" name="UnfrozenTime" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="QueryPaymentDetailCount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="QueryPaymentDetailCountReq" type="tns:QueryPaymentDetailCountReq"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="QueryPaymentDetailCountReq">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MerchantUid" type="xs:string"/>
+      <xs:element minOccurs="0" name="MerchantId" type="xs:string"/>
+      <xs:element minOccurs="0" name="QueryMonth" type="xs:string"/>
+      <xs:element minOccurs="0" name="ReferenceNo" type="xs:string"/>
+      <xs:element name="MoneyFlows" type="xs:int"/>
+      <xs:element name="MoneySource" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="QueryPaymentDetailCountResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="QueryPaymentDetailCountRsp" type="tns:QueryPaymentDetailCountRsp"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="QueryPaymentDetailCountRsp">
+    <xs:complexContent>
+      <xs:extension base="tns:BaseRsp">
+        <xs:sequence>
+          <xs:element name="TotalCount" type="xs:int"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="GetAccountByMerchant">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GetAccountByMerchantReq" type="tns:GetAccountByMerchantReq"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetAccountByMerchantReq">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MerchantUid" type="xs:string"/>
+      <xs:element minOccurs="0" name="MerchantId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetAccountByMerchantResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GetAccountByMerchantRsp" type="tns:GetAccountByMerchantRsp"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetAccountByMerchantRsp">
+    <xs:complexContent>
+      <xs:extension base="tns:BaseRsp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" type="xs:string"/>
+          <xs:element name="Balance" type="xs:long"/>
+          <xs:element name="PayOnlyBalance" type="xs:long"/>
+          <xs:element name="TotalBalance" type="xs:long"/>
+          <xs:element name="FrozenBalance" type="xs:long"/>
+          <xs:element name="WithdrawBalance" type="xs:long"/>
+          <xs:element name="Currency" type="xs:int"/>
+          <xs:element name="Status" type="xs:int"/>
+          <xs:element minOccurs="0" name="CreatedAt" type="xs:string"/>
+          <xs:element minOccurs="0" name="ActivatedAt" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="FreezeUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FreezeUserReq" type="tns:FreezeUserReq"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="FreezeUserReq">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="UserId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="FreezeUserResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FreezeUserRsp" type="tns:FreezeUserRsp"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="FreezeUserRsp">
+    <xs:complexContent>
+      <xs:extension base="tns:BaseRsp">
+        <xs:sequence>
+          <xs:element name="FrozenId" type="xs:long"/>
+          <xs:element minOccurs="0" name="FrozenTime" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="IsInWhiteList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IsInWhiteListReq" type="tns:IsInWhiteListReq"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="IsInWhiteListReq">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MerchantUid" type="xs:string"/>
+      <xs:element minOccurs="0" name="MerchantId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="IsInWhiteListResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IsInWhiteListRsp" type="tns:IsInWhiteListRsp"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="IsInWhiteListRsp">
+    <xs:complexContent>
+      <xs:extension base="tns:BaseRsp">
+        <xs:sequence>
+          <xs:element name="Flag" type="xs:int"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="QueryPaymentDetailResponse">
+    <wsdl:part element="tns:QueryPaymentDetailResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CheckCtripUserPassword">
+    <wsdl:part element="tns:CheckCtripUserPassword" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="QueryWithdrawCard">
+    <wsdl:part element="tns:QueryWithdrawCard" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="QueryWithdrawCardResponse">
+    <wsdl:part element="tns:QueryWithdrawCardResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="VerifyBankCardNoResponse">
+    <wsdl:part element="tns:VerifyBankCardNoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="IsInWhiteListResponse">
+    <wsdl:part element="tns:IsInWhiteListResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="QueryPaymentDetailOverviewResponse">
+    <wsdl:part element="tns:QueryPaymentDetailOverviewResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="QueryPaymentDetail">
+    <wsdl:part element="tns:QueryPaymentDetail" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetPaymentDetailByReferenceNo">
+    <wsdl:part element="tns:GetPaymentDetailByReferenceNo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetPaymentDetailByReferenceNoResponse">
+    <wsdl:part element="tns:GetPaymentDetailByReferenceNoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="QueryPaymentDetailCountResponse">
+    <wsdl:part element="tns:QueryPaymentDetailCountResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="FreezeUserResponse">
+    <wsdl:part element="tns:FreezeUserResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetAccountByMerchant">
+    <wsdl:part element="tns:GetAccountByMerchant" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="QueryPaymentDetailOverview">
+    <wsdl:part element="tns:QueryPaymentDetailOverview" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="IsInWhiteList">
+    <wsdl:part element="tns:IsInWhiteList" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="QueryPaymentDetailCount">
+    <wsdl:part element="tns:QueryPaymentDetailCount" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CheckCtripUserPasswordResponse">
+    <wsdl:part element="tns:CheckCtripUserPasswordResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetUserByMerchant">
+    <wsdl:part element="tns:GetUserByMerchant" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UnfreezeUser">
+    <wsdl:part element="tns:UnfreezeUser" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UnfreezeUserResponse">
+    <wsdl:part element="tns:UnfreezeUserResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetAccountByMerchantResponse">
+    <wsdl:part element="tns:GetAccountByMerchantResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetUserByMerchantResponse">
+    <wsdl:part element="tns:GetUserByMerchantResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="VerifyBankCardNo">
+    <wsdl:part element="tns:VerifyBankCardNo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="FreezeUser">
+    <wsdl:part element="tns:FreezeUser" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetCtripUserInfo">
+    <wsdl:part element="tns:GetCtripUserInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetCtripUserInfoResponse">
+    <wsdl:part element="tns:GetCtripUserInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="IAccountService">
+    <wsdl:operation name="VerifyBankCardNo">
+      <wsdl:input message="tns:VerifyBankCardNo" name="VerifyBankCardNo">
+    </wsdl:input>
+      <wsdl:output message="tns:VerifyBankCardNoResponse" name="VerifyBankCardNoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryWithdrawCard">
+      <wsdl:input message="tns:QueryWithdrawCard" name="QueryWithdrawCard">
+    </wsdl:input>
+      <wsdl:output message="tns:QueryWithdrawCardResponse" name="QueryWithdrawCardResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPaymentDetailOverview">
+      <wsdl:input message="tns:QueryPaymentDetailOverview" name="QueryPaymentDetailOverview">
+    </wsdl:input>
+      <wsdl:output message="tns:QueryPaymentDetailOverviewResponse" name="QueryPaymentDetailOverviewResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPaymentDetail">
+      <wsdl:input message="tns:QueryPaymentDetail" name="QueryPaymentDetail">
+    </wsdl:input>
+      <wsdl:output message="tns:QueryPaymentDetailResponse" name="QueryPaymentDetailResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByMerchant">
+      <wsdl:input message="tns:GetUserByMerchant" name="GetUserByMerchant">
+    </wsdl:input>
+      <wsdl:output message="tns:GetUserByMerchantResponse" name="GetUserByMerchantResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckCtripUserPassword">
+      <wsdl:input message="tns:CheckCtripUserPassword" name="CheckCtripUserPassword">
+    </wsdl:input>
+      <wsdl:output message="tns:CheckCtripUserPasswordResponse" name="CheckCtripUserPasswordResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCtripUserInfo">
+      <wsdl:input message="tns:GetCtripUserInfo" name="GetCtripUserInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:GetCtripUserInfoResponse" name="GetCtripUserInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentDetailByReferenceNo">
+      <wsdl:input message="tns:GetPaymentDetailByReferenceNo" name="GetPaymentDetailByReferenceNo">
+    </wsdl:input>
+      <wsdl:output message="tns:GetPaymentDetailByReferenceNoResponse" name="GetPaymentDetailByReferenceNoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnfreezeUser">
+      <wsdl:input message="tns:UnfreezeUser" name="UnfreezeUser">
+    </wsdl:input>
+      <wsdl:output message="tns:UnfreezeUserResponse" name="UnfreezeUserResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPaymentDetailCount">
+      <wsdl:input message="tns:QueryPaymentDetailCount" name="QueryPaymentDetailCount">
+    </wsdl:input>
+      <wsdl:output message="tns:QueryPaymentDetailCountResponse" name="QueryPaymentDetailCountResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountByMerchant">
+      <wsdl:input message="tns:GetAccountByMerchant" name="GetAccountByMerchant">
+    </wsdl:input>
+      <wsdl:output message="tns:GetAccountByMerchantResponse" name="GetAccountByMerchantResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FreezeUser">
+      <wsdl:input message="tns:FreezeUser" name="FreezeUser">
+    </wsdl:input>
+      <wsdl:output message="tns:FreezeUserResponse" name="FreezeUserResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsInWhiteList">
+      <wsdl:input message="tns:IsInWhiteList" name="IsInWhiteList">
+    </wsdl:input>
+      <wsdl:output message="tns:IsInWhiteListResponse" name="IsInWhiteListResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IAccountServiceServiceSoapBinding" type="tns:IAccountService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="QueryWithdrawCard">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="QueryWithdrawCard">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="QueryWithdrawCardResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPaymentDetailOverview">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="QueryPaymentDetailOverview">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="QueryPaymentDetailOverviewResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyBankCardNo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="VerifyBankCardNo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="VerifyBankCardNoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByMerchant">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="GetUserByMerchant">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GetUserByMerchantResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPaymentDetail">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="QueryPaymentDetail">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="QueryPaymentDetailResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckCtripUserPassword">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="CheckCtripUserPassword">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CheckCtripUserPasswordResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCtripUserInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="GetCtripUserInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GetCtripUserInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentDetailByReferenceNo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="GetPaymentDetailByReferenceNo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GetPaymentDetailByReferenceNoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountByMerchant">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="GetAccountByMerchant">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GetAccountByMerchantResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPaymentDetailCount">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="QueryPaymentDetailCount">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="QueryPaymentDetailCountResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnfreezeUser">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="UnfreezeUser">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="UnfreezeUserResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FreezeUser">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="FreezeUser">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="FreezeUserResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsInWhiteList">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="IsInWhiteList">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="IsInWhiteListResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IAccountServiceService">
+    <wsdl:port binding="tns:IAccountServiceServiceSoapBinding" name="IAccountServicePort">
+      <soap:address location="http://10.2.6.244/account_ws/services/AccountService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

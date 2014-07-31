@@ -1,0 +1,2720 @@
+[[(Service){
+   name = "ITxServiceService"
+   qname = "(ITxServiceService, http://www.ctrip.com/cwallet/ws/tx)"
+   ports[] = 
+      (Port){
+         name = "ITxServicePort"
+         qname = "(ITxServicePort, http://www.ctrip.com/cwallet/ws/tx)"
+         _Port__service = (Service)...
+         binding = 
+            (Binding){
+               name = "ITxServiceServiceSoapBinding"
+               qname = "(ITxServiceServiceSoapBinding, http://www.ctrip.com/cwallet/ws/tx)"
+               operations = 
+                  {
+                     PayRefundAccount = 
+                        (Operation){
+                           name = "PayRefundAccount"
+                           soap = 
+                              (soap){
+                                 action = """"
+                                 style = "document"
+                                 input = 
+                                    (Input){
+                                       body = 
+                                          (Body){
+                                             parts[] = 
+                                                (Part){
+                                                   root = <wsdl:part name="parameters" element="tns:PayRefundAccount">
+    </wsdl:part>
+                                                   name = "parameters"
+                                                   qname[] = 
+                                                      "parameters",
+                                                      "http://www.ctrip.com/cwallet/ws/tx",
+                                                   element = "(u'PayRefundAccount', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                                   type = "None"
+                                                },
+                                             use = "literal"
+                                             namespace[] = 
+                                                "tns",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             wrapped = True
+                                          }
+                                       headers[] = <empty>
+                                    }
+                                 output = 
+                                    (Output){
+                                       body = 
+                                          (Body){
+                                             parts[] = 
+                                                (Part){
+                                                   root = <wsdl:part name="parameters" element="tns:PayRefundAccountResponse">
+    </wsdl:part>
+                                                   name = "parameters"
+                                                   qname[] = 
+                                                      "parameters",
+                                                      "http://www.ctrip.com/cwallet/ws/tx",
+                                                   element = "(u'PayRefundAccountResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                                   type = "None"
+                                                },
+                                             use = "literal"
+                                             namespace[] = 
+                                                "tns",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             wrapped = True
+                                          }
+                                       headers[] = <empty>
+                                    }
+                                 faults[] = <empty>
+                              }
+                        }
+                     PayUnfreezeAccount = 
+                        (Operation){
+                           name = "PayUnfreezeAccount"
+                           soap = 
+                              (soap){
+                                 action = """"
+                                 style = "document"
+                                 input = 
+                                    (Input){
+                                       body = 
+                                          (Body){
+                                             parts[] = 
+                                                (Part){
+                                                   root = <wsdl:part name="parameters" element="tns:PayUnfreezeAccount">
+    </wsdl:part>
+                                                   name = "parameters"
+                                                   qname[] = 
+                                                      "parameters",
+                                                      "http://www.ctrip.com/cwallet/ws/tx",
+                                                   element = "(u'PayUnfreezeAccount', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                                   type = "None"
+                                                },
+                                             use = "literal"
+                                             namespace[] = 
+                                                "tns",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             wrapped = True
+                                          }
+                                       headers[] = <empty>
+                                    }
+                                 output = 
+                                    (Output){
+                                       body = 
+                                          (Body){
+                                             parts[] = 
+                                                (Part){
+                                                   root = <wsdl:part name="parameters" element="tns:PayUnfreezeAccountResponse">
+    </wsdl:part>
+                                                   name = "parameters"
+                                                   qname[] = 
+                                                      "parameters",
+                                                      "http://www.ctrip.com/cwallet/ws/tx",
+                                                   element = "(u'PayUnfreezeAccountResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                                   type = "None"
+                                                },
+                                             use = "literal"
+                                             namespace[] = 
+                                                "tns",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             wrapped = True
+                                          }
+                                       headers[] = <empty>
+                                    }
+                                 faults[] = <empty>
+                              }
+                        }
+                     QueryWithdrawRecordCount = 
+                        (Operation){
+                           name = "QueryWithdrawRecordCount"
+                           soap = 
+                              (soap){
+                                 action = """"
+                                 style = "document"
+                                 input = 
+                                    (Input){
+                                       body = 
+                                          (Body){
+                                             parts[] = 
+                                                (Part){
+                                                   root = <wsdl:part name="parameters" element="tns:QueryWithdrawRecordCount">
+    </wsdl:part>
+                                                   name = "parameters"
+                                                   qname[] = 
+                                                      "parameters",
+                                                      "http://www.ctrip.com/cwallet/ws/tx",
+                                                   element = "(u'QueryWithdrawRecordCount', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                                   type = "None"
+                                                },
+                                             use = "literal"
+                                             namespace[] = 
+                                                "tns",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             wrapped = True
+                                          }
+                                       headers[] = <empty>
+                                    }
+                                 output = 
+                                    (Output){
+                                       body = 
+                                          (Body){
+                                             parts[] = 
+                                                (Part){
+                                                   root = <wsdl:part name="parameters" element="tns:QueryWithdrawRecordCountResponse">
+    </wsdl:part>
+                                                   name = "parameters"
+                                                   qname[] = 
+                                                      "parameters",
+                                                      "http://www.ctrip.com/cwallet/ws/tx",
+                                                   element = "(u'QueryWithdrawRecordCountResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                                   type = "None"
+                                                },
+                                             use = "literal"
+                                             namespace[] = 
+                                                "tns",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             wrapped = True
+                                          }
+                                       headers[] = <empty>
+                                    }
+                                 faults[] = <empty>
+                              }
+                        }
+                     QueryWithdrawRecordOverview = 
+                        (Operation){
+                           name = "QueryWithdrawRecordOverview"
+                           soap = 
+                              (soap){
+                                 action = """"
+                                 style = "document"
+                                 input = 
+                                    (Input){
+                                       body = 
+                                          (Body){
+                                             parts[] = 
+                                                (Part){
+                                                   root = <wsdl:part name="parameters" element="tns:QueryWithdrawRecordOverview">
+    </wsdl:part>
+                                                   name = "parameters"
+                                                   qname[] = 
+                                                      "parameters",
+                                                      "http://www.ctrip.com/cwallet/ws/tx",
+                                                   element = "(u'QueryWithdrawRecordOverview', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                                   type = "None"
+                                                },
+                                             use = "literal"
+                                             namespace[] = 
+                                                "tns",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             wrapped = True
+                                          }
+                                       headers[] = <empty>
+                                    }
+                                 output = 
+                                    (Output){
+                                       body = 
+                                          (Body){
+                                             parts[] = 
+                                                (Part){
+                                                   root = <wsdl:part name="parameters" element="tns:QueryWithdrawRecordOverviewResponse">
+    </wsdl:part>
+                                                   name = "parameters"
+                                                   qname[] = 
+                                                      "parameters",
+                                                      "http://www.ctrip.com/cwallet/ws/tx",
+                                                   element = "(u'QueryWithdrawRecordOverviewResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                                   type = "None"
+                                                },
+                                             use = "literal"
+                                             namespace[] = 
+                                                "tns",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             wrapped = True
+                                          }
+                                       headers[] = <empty>
+                                    }
+                                 faults[] = <empty>
+                              }
+                        }
+                     SaveRechargeResult = 
+                        (Operation){
+                           name = "SaveRechargeResult"
+                           soap = 
+                              (soap){
+                                 action = """"
+                                 style = "document"
+                                 input = 
+                                    (Input){
+                                       body = 
+                                          (Body){
+                                             parts[] = 
+                                                (Part){
+                                                   root = <wsdl:part name="parameters" element="tns:SaveRechargeResult">
+    </wsdl:part>
+                                                   name = "parameters"
+                                                   qname[] = 
+                                                      "parameters",
+                                                      "http://www.ctrip.com/cwallet/ws/tx",
+                                                   element = "(u'SaveRechargeResult', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                                   type = "None"
+                                                },
+                                             use = "literal"
+                                             namespace[] = 
+                                                "tns",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             wrapped = True
+                                          }
+                                       headers[] = <empty>
+                                    }
+                                 output = 
+                                    (Output){
+                                       body = 
+                                          (Body){
+                                             parts[] = 
+                                                (Part){
+                                                   root = <wsdl:part name="parameters" element="tns:SaveRechargeResultResponse">
+    </wsdl:part>
+                                                   name = "parameters"
+                                                   qname[] = 
+                                                      "parameters",
+                                                      "http://www.ctrip.com/cwallet/ws/tx",
+                                                   element = "(u'SaveRechargeResultResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                                   type = "None"
+                                                },
+                                             use = "literal"
+                                             namespace[] = 
+                                                "tns",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             wrapped = True
+                                          }
+                                       headers[] = <empty>
+                                    }
+                                 faults[] = <empty>
+                              }
+                        }
+                     GetRechargeRecordByReferenceNo = 
+                        (Operation){
+                           name = "GetRechargeRecordByReferenceNo"
+                           soap = 
+                              (soap){
+                                 action = """"
+                                 style = "document"
+                                 input = 
+                                    (Input){
+                                       body = 
+                                          (Body){
+                                             parts[] = 
+                                                (Part){
+                                                   root = <wsdl:part name="parameters" element="tns:GetRechargeRecordByReferenceNo">
+    </wsdl:part>
+                                                   name = "parameters"
+                                                   qname[] = 
+                                                      "parameters",
+                                                      "http://www.ctrip.com/cwallet/ws/tx",
+                                                   element = "(u'GetRechargeRecordByReferenceNo', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                                   type = "None"
+                                                },
+                                             use = "literal"
+                                             namespace[] = 
+                                                "tns",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             wrapped = True
+                                          }
+                                       headers[] = <empty>
+                                    }
+                                 output = 
+                                    (Output){
+                                       body = 
+                                          (Body){
+                                             parts[] = 
+                                                (Part){
+                                                   root = <wsdl:part name="parameters" element="tns:GetRechargeRecordByReferenceNoResponse">
+    </wsdl:part>
+                                                   name = "parameters"
+                                                   qname[] = 
+                                                      "parameters",
+                                                      "http://www.ctrip.com/cwallet/ws/tx",
+                                                   element = "(u'GetRechargeRecordByReferenceNoResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                                   type = "None"
+                                                },
+                                             use = "literal"
+                                             namespace[] = 
+                                                "tns",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             wrapped = True
+                                          }
+                                       headers[] = <empty>
+                                    }
+                                 faults[] = <empty>
+                              }
+                        }
+                     WithdrawSubmitByReferenceNo = 
+                        (Operation){
+                           name = "WithdrawSubmitByReferenceNo"
+                           soap = 
+                              (soap){
+                                 action = """"
+                                 style = "document"
+                                 input = 
+                                    (Input){
+                                       body = 
+                                          (Body){
+                                             parts[] = 
+                                                (Part){
+                                                   root = <wsdl:part name="parameters" element="tns:WithdrawSubmitByReferenceNo">
+    </wsdl:part>
+                                                   name = "parameters"
+                                                   qname[] = 
+                                                      "parameters",
+                                                      "http://www.ctrip.com/cwallet/ws/tx",
+                                                   element = "(u'WithdrawSubmitByReferenceNo', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                                   type = "None"
+                                                },
+                                             use = "literal"
+                                             namespace[] = 
+                                                "tns",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             wrapped = True
+                                          }
+                                       headers[] = <empty>
+                                    }
+                                 output = 
+                                    (Output){
+                                       body = 
+                                          (Body){
+                                             parts[] = 
+                                                (Part){
+                                                   root = <wsdl:part name="parameters" element="tns:WithdrawSubmitByReferenceNoResponse">
+    </wsdl:part>
+                                                   name = "parameters"
+                                                   qname[] = 
+                                                      "parameters",
+                                                      "http://www.ctrip.com/cwallet/ws/tx",
+                                                   element = "(u'WithdrawSubmitByReferenceNoResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                                   type = "None"
+                                                },
+                                             use = "literal"
+                                             namespace[] = 
+                                                "tns",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             wrapped = True
+                                          }
+                                       headers[] = <empty>
+                                    }
+                                 faults[] = <empty>
+                              }
+                        }
+                     QueryRechargeRecordCount = 
+                        (Operation){
+                           name = "QueryRechargeRecordCount"
+                           soap = 
+                              (soap){
+                                 action = """"
+                                 style = "document"
+                                 input = 
+                                    (Input){
+                                       body = 
+                                          (Body){
+                                             parts[] = 
+                                                (Part){
+                                                   root = <wsdl:part name="parameters" element="tns:QueryRechargeRecordCount">
+    </wsdl:part>
+                                                   name = "parameters"
+                                                   qname[] = 
+                                                      "parameters",
+                                                      "http://www.ctrip.com/cwallet/ws/tx",
+                                                   element = "(u'QueryRechargeRecordCount', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                                   type = "None"
+                                                },
+                                             use = "literal"
+                                             namespace[] = 
+                                                "tns",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             wrapped = True
+                                          }
+                                       headers[] = <empty>
+                                    }
+                                 output = 
+                                    (Output){
+                                       body = 
+                                          (Body){
+                                             parts[] = 
+                                                (Part){
+                                                   root = <wsdl:part name="parameters" element="tns:QueryRechargeRecordCountResponse">
+    </wsdl:part>
+                                                   name = "parameters"
+                                                   qname[] = 
+                                                      "parameters",
+                                                      "http://www.ctrip.com/cwallet/ws/tx",
+                                                   element = "(u'QueryRechargeRecordCountResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                                   type = "None"
+                                                },
+                                             use = "literal"
+                                             namespace[] = 
+                                                "tns",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             wrapped = True
+                                          }
+                                       headers[] = <empty>
+                                    }
+                                 faults[] = <empty>
+                              }
+                        }
+                     CreateRechargeOrder = 
+                        (Operation){
+                           name = "CreateRechargeOrder"
+                           soap = 
+                              (soap){
+                                 action = """"
+                                 style = "document"
+                                 input = 
+                                    (Input){
+                                       body = 
+                                          (Body){
+                                             parts[] = 
+                                                (Part){
+                                                   root = <wsdl:part name="parameters" element="tns:CreateRechargeOrder">
+    </wsdl:part>
+                                                   name = "parameters"
+                                                   qname[] = 
+                                                      "parameters",
+                                                      "http://www.ctrip.com/cwallet/ws/tx",
+                                                   element = "(u'CreateRechargeOrder', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                                   type = "None"
+                                                },
+                                             use = "literal"
+                                             namespace[] = 
+                                                "tns",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             wrapped = True
+                                          }
+                                       headers[] = <empty>
+                                    }
+                                 output = 
+                                    (Output){
+                                       body = 
+                                          (Body){
+                                             parts[] = 
+                                                (Part){
+                                                   root = <wsdl:part name="parameters" element="tns:CreateRechargeOrderResponse">
+    </wsdl:part>
+                                                   name = "parameters"
+                                                   qname[] = 
+                                                      "parameters",
+                                                      "http://www.ctrip.com/cwallet/ws/tx",
+                                                   element = "(u'CreateRechargeOrderResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                                   type = "None"
+                                                },
+                                             use = "literal"
+                                             namespace[] = 
+                                                "tns",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             wrapped = True
+                                          }
+                                       headers[] = <empty>
+                                    }
+                                 faults[] = <empty>
+                              }
+                        }
+                     QueryRechargeRecord = 
+                        (Operation){
+                           name = "QueryRechargeRecord"
+                           soap = 
+                              (soap){
+                                 action = """"
+                                 style = "document"
+                                 input = 
+                                    (Input){
+                                       body = 
+                                          (Body){
+                                             parts[] = 
+                                                (Part){
+                                                   root = <wsdl:part name="parameters" element="tns:QueryRechargeRecord">
+    </wsdl:part>
+                                                   name = "parameters"
+                                                   qname[] = 
+                                                      "parameters",
+                                                      "http://www.ctrip.com/cwallet/ws/tx",
+                                                   element = "(u'QueryRechargeRecord', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                                   type = "None"
+                                                },
+                                             use = "literal"
+                                             namespace[] = 
+                                                "tns",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             wrapped = True
+                                          }
+                                       headers[] = <empty>
+                                    }
+                                 output = 
+                                    (Output){
+                                       body = 
+                                          (Body){
+                                             parts[] = 
+                                                (Part){
+                                                   root = <wsdl:part name="parameters" element="tns:QueryRechargeRecordResponse">
+    </wsdl:part>
+                                                   name = "parameters"
+                                                   qname[] = 
+                                                      "parameters",
+                                                      "http://www.ctrip.com/cwallet/ws/tx",
+                                                   element = "(u'QueryRechargeRecordResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                                   type = "None"
+                                                },
+                                             use = "literal"
+                                             namespace[] = 
+                                                "tns",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             wrapped = True
+                                          }
+                                       headers[] = <empty>
+                                    }
+                                 faults[] = <empty>
+                              }
+                        }
+                     PayFreezeAccount = 
+                        (Operation){
+                           name = "PayFreezeAccount"
+                           soap = 
+                              (soap){
+                                 action = """"
+                                 style = "document"
+                                 input = 
+                                    (Input){
+                                       body = 
+                                          (Body){
+                                             parts[] = 
+                                                (Part){
+                                                   root = <wsdl:part name="parameters" element="tns:PayFreezeAccount">
+    </wsdl:part>
+                                                   name = "parameters"
+                                                   qname[] = 
+                                                      "parameters",
+                                                      "http://www.ctrip.com/cwallet/ws/tx",
+                                                   element = "(u'PayFreezeAccount', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                                   type = "None"
+                                                },
+                                             use = "literal"
+                                             namespace[] = 
+                                                "tns",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             wrapped = True
+                                          }
+                                       headers[] = <empty>
+                                    }
+                                 output = 
+                                    (Output){
+                                       body = 
+                                          (Body){
+                                             parts[] = 
+                                                (Part){
+                                                   root = <wsdl:part name="parameters" element="tns:PayFreezeAccountResponse">
+    </wsdl:part>
+                                                   name = "parameters"
+                                                   qname[] = 
+                                                      "parameters",
+                                                      "http://www.ctrip.com/cwallet/ws/tx",
+                                                   element = "(u'PayFreezeAccountResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                                   type = "None"
+                                                },
+                                             use = "literal"
+                                             namespace[] = 
+                                                "tns",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             wrapped = True
+                                          }
+                                       headers[] = <empty>
+                                    }
+                                 faults[] = <empty>
+                              }
+                        }
+                     GetWithdrawRecordByReferenceNo = 
+                        (Operation){
+                           name = "GetWithdrawRecordByReferenceNo"
+                           soap = 
+                              (soap){
+                                 action = """"
+                                 style = "document"
+                                 input = 
+                                    (Input){
+                                       body = 
+                                          (Body){
+                                             parts[] = 
+                                                (Part){
+                                                   root = <wsdl:part name="parameters" element="tns:GetWithdrawRecordByReferenceNo">
+    </wsdl:part>
+                                                   name = "parameters"
+                                                   qname[] = 
+                                                      "parameters",
+                                                      "http://www.ctrip.com/cwallet/ws/tx",
+                                                   element = "(u'GetWithdrawRecordByReferenceNo', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                                   type = "None"
+                                                },
+                                             use = "literal"
+                                             namespace[] = 
+                                                "tns",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             wrapped = True
+                                          }
+                                       headers[] = <empty>
+                                    }
+                                 output = 
+                                    (Output){
+                                       body = 
+                                          (Body){
+                                             parts[] = 
+                                                (Part){
+                                                   root = <wsdl:part name="parameters" element="tns:GetWithdrawRecordByReferenceNoResponse">
+    </wsdl:part>
+                                                   name = "parameters"
+                                                   qname[] = 
+                                                      "parameters",
+                                                      "http://www.ctrip.com/cwallet/ws/tx",
+                                                   element = "(u'GetWithdrawRecordByReferenceNoResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                                   type = "None"
+                                                },
+                                             use = "literal"
+                                             namespace[] = 
+                                                "tns",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             wrapped = True
+                                          }
+                                       headers[] = <empty>
+                                    }
+                                 faults[] = <empty>
+                              }
+                        }
+                     GetWithdrawLimit = 
+                        (Operation){
+                           name = "GetWithdrawLimit"
+                           soap = 
+                              (soap){
+                                 action = """"
+                                 style = "document"
+                                 input = 
+                                    (Input){
+                                       body = 
+                                          (Body){
+                                             parts[] = 
+                                                (Part){
+                                                   root = <wsdl:part name="parameters" element="tns:GetWithdrawLimit">
+    </wsdl:part>
+                                                   name = "parameters"
+                                                   qname[] = 
+                                                      "parameters",
+                                                      "http://www.ctrip.com/cwallet/ws/tx",
+                                                   element = "(u'GetWithdrawLimit', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                                   type = "None"
+                                                },
+                                             use = "literal"
+                                             namespace[] = 
+                                                "tns",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             wrapped = True
+                                          }
+                                       headers[] = <empty>
+                                    }
+                                 output = 
+                                    (Output){
+                                       body = 
+                                          (Body){
+                                             parts[] = 
+                                                (Part){
+                                                   root = <wsdl:part name="parameters" element="tns:GetWithdrawLimitResponse">
+    </wsdl:part>
+                                                   name = "parameters"
+                                                   qname[] = 
+                                                      "parameters",
+                                                      "http://www.ctrip.com/cwallet/ws/tx",
+                                                   element = "(u'GetWithdrawLimitResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                                   type = "None"
+                                                },
+                                             use = "literal"
+                                             namespace[] = 
+                                                "tns",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             wrapped = True
+                                          }
+                                       headers[] = <empty>
+                                    }
+                                 faults[] = <empty>
+                              }
+                        }
+                     WithdrawSubmit = 
+                        (Operation){
+                           name = "WithdrawSubmit"
+                           soap = 
+                              (soap){
+                                 action = """"
+                                 style = "document"
+                                 input = 
+                                    (Input){
+                                       body = 
+                                          (Body){
+                                             parts[] = 
+                                                (Part){
+                                                   root = <wsdl:part name="parameters" element="tns:WithdrawSubmit">
+    </wsdl:part>
+                                                   name = "parameters"
+                                                   qname[] = 
+                                                      "parameters",
+                                                      "http://www.ctrip.com/cwallet/ws/tx",
+                                                   element = "(u'WithdrawSubmit', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                                   type = "None"
+                                                },
+                                             use = "literal"
+                                             namespace[] = 
+                                                "tns",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             wrapped = True
+                                          }
+                                       headers[] = <empty>
+                                    }
+                                 output = 
+                                    (Output){
+                                       body = 
+                                          (Body){
+                                             parts[] = 
+                                                (Part){
+                                                   root = <wsdl:part name="parameters" element="tns:WithdrawSubmitResponse">
+    </wsdl:part>
+                                                   name = "parameters"
+                                                   qname[] = 
+                                                      "parameters",
+                                                      "http://www.ctrip.com/cwallet/ws/tx",
+                                                   element = "(u'WithdrawSubmitResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                                   type = "None"
+                                                },
+                                             use = "literal"
+                                             namespace[] = 
+                                                "tns",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             wrapped = True
+                                          }
+                                       headers[] = <empty>
+                                    }
+                                 faults[] = <empty>
+                              }
+                        }
+                     QueryRechargeRecordOverview = 
+                        (Operation){
+                           name = "QueryRechargeRecordOverview"
+                           soap = 
+                              (soap){
+                                 action = """"
+                                 style = "document"
+                                 input = 
+                                    (Input){
+                                       body = 
+                                          (Body){
+                                             parts[] = 
+                                                (Part){
+                                                   root = <wsdl:part name="parameters" element="tns:QueryRechargeRecordOverview">
+    </wsdl:part>
+                                                   name = "parameters"
+                                                   qname[] = 
+                                                      "parameters",
+                                                      "http://www.ctrip.com/cwallet/ws/tx",
+                                                   element = "(u'QueryRechargeRecordOverview', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                                   type = "None"
+                                                },
+                                             use = "literal"
+                                             namespace[] = 
+                                                "tns",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             wrapped = True
+                                          }
+                                       headers[] = <empty>
+                                    }
+                                 output = 
+                                    (Output){
+                                       body = 
+                                          (Body){
+                                             parts[] = 
+                                                (Part){
+                                                   root = <wsdl:part name="parameters" element="tns:QueryRechargeRecordOverviewResponse">
+    </wsdl:part>
+                                                   name = "parameters"
+                                                   qname[] = 
+                                                      "parameters",
+                                                      "http://www.ctrip.com/cwallet/ws/tx",
+                                                   element = "(u'QueryRechargeRecordOverviewResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                                   type = "None"
+                                                },
+                                             use = "literal"
+                                             namespace[] = 
+                                                "tns",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             wrapped = True
+                                          }
+                                       headers[] = <empty>
+                                    }
+                                 faults[] = <empty>
+                              }
+                        }
+                     QueryWithdrawRecord = 
+                        (Operation){
+                           name = "QueryWithdrawRecord"
+                           soap = 
+                              (soap){
+                                 action = """"
+                                 style = "document"
+                                 input = 
+                                    (Input){
+                                       body = 
+                                          (Body){
+                                             parts[] = 
+                                                (Part){
+                                                   root = <wsdl:part name="parameters" element="tns:QueryWithdrawRecord">
+    </wsdl:part>
+                                                   name = "parameters"
+                                                   qname[] = 
+                                                      "parameters",
+                                                      "http://www.ctrip.com/cwallet/ws/tx",
+                                                   element = "(u'QueryWithdrawRecord', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                                   type = "None"
+                                                },
+                                             use = "literal"
+                                             namespace[] = 
+                                                "tns",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             wrapped = True
+                                          }
+                                       headers[] = <empty>
+                                    }
+                                 output = 
+                                    (Output){
+                                       body = 
+                                          (Body){
+                                             parts[] = 
+                                                (Part){
+                                                   root = <wsdl:part name="parameters" element="tns:QueryWithdrawRecordResponse">
+    </wsdl:part>
+                                                   name = "parameters"
+                                                   qname[] = 
+                                                      "parameters",
+                                                      "http://www.ctrip.com/cwallet/ws/tx",
+                                                   element = "(u'QueryWithdrawRecordResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                                   type = "None"
+                                                },
+                                             use = "literal"
+                                             namespace[] = 
+                                                "tns",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             wrapped = True
+                                          }
+                                       headers[] = <empty>
+                                    }
+                                 faults[] = <empty>
+                              }
+                        }
+                     PayCutAccount = 
+                        (Operation){
+                           name = "PayCutAccount"
+                           soap = 
+                              (soap){
+                                 action = """"
+                                 style = "document"
+                                 input = 
+                                    (Input){
+                                       body = 
+                                          (Body){
+                                             parts[] = 
+                                                (Part){
+                                                   root = <wsdl:part name="parameters" element="tns:PayCutAccount">
+    </wsdl:part>
+                                                   name = "parameters"
+                                                   qname[] = 
+                                                      "parameters",
+                                                      "http://www.ctrip.com/cwallet/ws/tx",
+                                                   element = "(u'PayCutAccount', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                                   type = "None"
+                                                },
+                                             use = "literal"
+                                             namespace[] = 
+                                                "tns",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             wrapped = True
+                                          }
+                                       headers[] = <empty>
+                                    }
+                                 output = 
+                                    (Output){
+                                       body = 
+                                          (Body){
+                                             parts[] = 
+                                                (Part){
+                                                   root = <wsdl:part name="parameters" element="tns:PayCutAccountResponse">
+    </wsdl:part>
+                                                   name = "parameters"
+                                                   qname[] = 
+                                                      "parameters",
+                                                      "http://www.ctrip.com/cwallet/ws/tx",
+                                                   element = "(u'PayCutAccountResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                                   type = "None"
+                                                },
+                                             use = "literal"
+                                             namespace[] = 
+                                                "tns",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             wrapped = True
+                                          }
+                                       headers[] = <empty>
+                                    }
+                                 faults[] = <empty>
+                              }
+                        }
+                  }
+               type = 
+                  (PortType){
+                     name = "ITxService"
+                     qname = "(ITxService, http://www.ctrip.com/cwallet/ws/tx)"
+                     operations = 
+                        {
+                           PayRefundAccount = 
+                              (Operation){
+                                 name = "PayRefundAccount"
+                                 tns[] = 
+                                    "tns",
+                                    "http://www.ctrip.com/cwallet/ws/tx",
+                                 input = 
+                                    (Message){
+                                       name = "PayRefundAccount"
+                                       qname = "(PayRefundAccount, http://www.ctrip.com/cwallet/ws/tx)"
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:PayRefundAccount">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'PayRefundAccount', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                    }
+                                 output = 
+                                    (Message){
+                                       name = "PayRefundAccountResponse"
+                                       qname = "(PayRefundAccountResponse, http://www.ctrip.com/cwallet/ws/tx)"
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:PayRefundAccountResponse">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'PayRefundAccountResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                    }
+                                 faults[] = <empty>
+                              }
+                           PayUnfreezeAccount = 
+                              (Operation){
+                                 name = "PayUnfreezeAccount"
+                                 tns[] = 
+                                    "tns",
+                                    "http://www.ctrip.com/cwallet/ws/tx",
+                                 input = 
+                                    (Message){
+                                       name = "PayUnfreezeAccount"
+                                       qname = "(PayUnfreezeAccount, http://www.ctrip.com/cwallet/ws/tx)"
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:PayUnfreezeAccount">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'PayUnfreezeAccount', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                    }
+                                 output = 
+                                    (Message){
+                                       name = "PayUnfreezeAccountResponse"
+                                       qname = "(PayUnfreezeAccountResponse, http://www.ctrip.com/cwallet/ws/tx)"
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:PayUnfreezeAccountResponse">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'PayUnfreezeAccountResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                    }
+                                 faults[] = <empty>
+                              }
+                           QueryWithdrawRecordCount = 
+                              (Operation){
+                                 name = "QueryWithdrawRecordCount"
+                                 tns[] = 
+                                    "tns",
+                                    "http://www.ctrip.com/cwallet/ws/tx",
+                                 input = 
+                                    (Message){
+                                       name = "QueryWithdrawRecordCount"
+                                       qname = "(QueryWithdrawRecordCount, http://www.ctrip.com/cwallet/ws/tx)"
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:QueryWithdrawRecordCount">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'QueryWithdrawRecordCount', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                    }
+                                 output = 
+                                    (Message){
+                                       name = "QueryWithdrawRecordCountResponse"
+                                       qname = "(QueryWithdrawRecordCountResponse, http://www.ctrip.com/cwallet/ws/tx)"
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:QueryWithdrawRecordCountResponse">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'QueryWithdrawRecordCountResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                    }
+                                 faults[] = <empty>
+                              }
+                           QueryWithdrawRecordOverview = 
+                              (Operation){
+                                 name = "QueryWithdrawRecordOverview"
+                                 tns[] = 
+                                    "tns",
+                                    "http://www.ctrip.com/cwallet/ws/tx",
+                                 input = 
+                                    (Message){
+                                       name = "QueryWithdrawRecordOverview"
+                                       qname = "(QueryWithdrawRecordOverview, http://www.ctrip.com/cwallet/ws/tx)"
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:QueryWithdrawRecordOverview">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'QueryWithdrawRecordOverview', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                    }
+                                 output = 
+                                    (Message){
+                                       name = "QueryWithdrawRecordOverviewResponse"
+                                       qname = "(QueryWithdrawRecordOverviewResponse, http://www.ctrip.com/cwallet/ws/tx)"
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:QueryWithdrawRecordOverviewResponse">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'QueryWithdrawRecordOverviewResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                    }
+                                 faults[] = <empty>
+                              }
+                           SaveRechargeResult = 
+                              (Operation){
+                                 name = "SaveRechargeResult"
+                                 tns[] = 
+                                    "tns",
+                                    "http://www.ctrip.com/cwallet/ws/tx",
+                                 input = 
+                                    (Message){
+                                       name = "SaveRechargeResult"
+                                       qname = "(SaveRechargeResult, http://www.ctrip.com/cwallet/ws/tx)"
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:SaveRechargeResult">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'SaveRechargeResult', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                    }
+                                 output = 
+                                    (Message){
+                                       name = "SaveRechargeResultResponse"
+                                       qname = "(SaveRechargeResultResponse, http://www.ctrip.com/cwallet/ws/tx)"
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:SaveRechargeResultResponse">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'SaveRechargeResultResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                    }
+                                 faults[] = <empty>
+                              }
+                           GetRechargeRecordByReferenceNo = 
+                              (Operation){
+                                 name = "GetRechargeRecordByReferenceNo"
+                                 tns[] = 
+                                    "tns",
+                                    "http://www.ctrip.com/cwallet/ws/tx",
+                                 input = 
+                                    (Message){
+                                       name = "GetRechargeRecordByReferenceNo"
+                                       qname = "(GetRechargeRecordByReferenceNo, http://www.ctrip.com/cwallet/ws/tx)"
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:GetRechargeRecordByReferenceNo">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'GetRechargeRecordByReferenceNo', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                    }
+                                 output = 
+                                    (Message){
+                                       name = "GetRechargeRecordByReferenceNoResponse"
+                                       qname = "(GetRechargeRecordByReferenceNoResponse, http://www.ctrip.com/cwallet/ws/tx)"
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:GetRechargeRecordByReferenceNoResponse">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'GetRechargeRecordByReferenceNoResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                    }
+                                 faults[] = <empty>
+                              }
+                           WithdrawSubmitByReferenceNo = 
+                              (Operation){
+                                 name = "WithdrawSubmitByReferenceNo"
+                                 tns[] = 
+                                    "tns",
+                                    "http://www.ctrip.com/cwallet/ws/tx",
+                                 input = 
+                                    (Message){
+                                       name = "WithdrawSubmitByReferenceNo"
+                                       qname = "(WithdrawSubmitByReferenceNo, http://www.ctrip.com/cwallet/ws/tx)"
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:WithdrawSubmitByReferenceNo">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'WithdrawSubmitByReferenceNo', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                    }
+                                 output = 
+                                    (Message){
+                                       name = "WithdrawSubmitByReferenceNoResponse"
+                                       qname = "(WithdrawSubmitByReferenceNoResponse, http://www.ctrip.com/cwallet/ws/tx)"
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:WithdrawSubmitByReferenceNoResponse">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'WithdrawSubmitByReferenceNoResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                    }
+                                 faults[] = <empty>
+                              }
+                           QueryRechargeRecordCount = 
+                              (Operation){
+                                 name = "QueryRechargeRecordCount"
+                                 tns[] = 
+                                    "tns",
+                                    "http://www.ctrip.com/cwallet/ws/tx",
+                                 input = 
+                                    (Message){
+                                       name = "QueryRechargeRecordCount"
+                                       qname = "(QueryRechargeRecordCount, http://www.ctrip.com/cwallet/ws/tx)"
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:QueryRechargeRecordCount">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'QueryRechargeRecordCount', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                    }
+                                 output = 
+                                    (Message){
+                                       name = "QueryRechargeRecordCountResponse"
+                                       qname = "(QueryRechargeRecordCountResponse, http://www.ctrip.com/cwallet/ws/tx)"
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:QueryRechargeRecordCountResponse">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'QueryRechargeRecordCountResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                    }
+                                 faults[] = <empty>
+                              }
+                           CreateRechargeOrder = 
+                              (Operation){
+                                 name = "CreateRechargeOrder"
+                                 tns[] = 
+                                    "tns",
+                                    "http://www.ctrip.com/cwallet/ws/tx",
+                                 input = 
+                                    (Message){
+                                       name = "CreateRechargeOrder"
+                                       qname = "(CreateRechargeOrder, http://www.ctrip.com/cwallet/ws/tx)"
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:CreateRechargeOrder">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'CreateRechargeOrder', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                    }
+                                 output = 
+                                    (Message){
+                                       name = "CreateRechargeOrderResponse"
+                                       qname = "(CreateRechargeOrderResponse, http://www.ctrip.com/cwallet/ws/tx)"
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:CreateRechargeOrderResponse">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'CreateRechargeOrderResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                    }
+                                 faults[] = <empty>
+                              }
+                           QueryRechargeRecord = 
+                              (Operation){
+                                 name = "QueryRechargeRecord"
+                                 tns[] = 
+                                    "tns",
+                                    "http://www.ctrip.com/cwallet/ws/tx",
+                                 input = 
+                                    (Message){
+                                       name = "QueryRechargeRecord"
+                                       qname = "(QueryRechargeRecord, http://www.ctrip.com/cwallet/ws/tx)"
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:QueryRechargeRecord">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'QueryRechargeRecord', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                    }
+                                 output = 
+                                    (Message){
+                                       name = "QueryRechargeRecordResponse"
+                                       qname = "(QueryRechargeRecordResponse, http://www.ctrip.com/cwallet/ws/tx)"
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:QueryRechargeRecordResponse">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'QueryRechargeRecordResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                    }
+                                 faults[] = <empty>
+                              }
+                           PayFreezeAccount = 
+                              (Operation){
+                                 name = "PayFreezeAccount"
+                                 tns[] = 
+                                    "tns",
+                                    "http://www.ctrip.com/cwallet/ws/tx",
+                                 input = 
+                                    (Message){
+                                       name = "PayFreezeAccount"
+                                       qname = "(PayFreezeAccount, http://www.ctrip.com/cwallet/ws/tx)"
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:PayFreezeAccount">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'PayFreezeAccount', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                    }
+                                 output = 
+                                    (Message){
+                                       name = "PayFreezeAccountResponse"
+                                       qname = "(PayFreezeAccountResponse, http://www.ctrip.com/cwallet/ws/tx)"
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:PayFreezeAccountResponse">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'PayFreezeAccountResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                    }
+                                 faults[] = <empty>
+                              }
+                           GetWithdrawRecordByReferenceNo = 
+                              (Operation){
+                                 name = "GetWithdrawRecordByReferenceNo"
+                                 tns[] = 
+                                    "tns",
+                                    "http://www.ctrip.com/cwallet/ws/tx",
+                                 input = 
+                                    (Message){
+                                       name = "GetWithdrawRecordByReferenceNo"
+                                       qname = "(GetWithdrawRecordByReferenceNo, http://www.ctrip.com/cwallet/ws/tx)"
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:GetWithdrawRecordByReferenceNo">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'GetWithdrawRecordByReferenceNo', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                    }
+                                 output = 
+                                    (Message){
+                                       name = "GetWithdrawRecordByReferenceNoResponse"
+                                       qname = "(GetWithdrawRecordByReferenceNoResponse, http://www.ctrip.com/cwallet/ws/tx)"
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:GetWithdrawRecordByReferenceNoResponse">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'GetWithdrawRecordByReferenceNoResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                    }
+                                 faults[] = <empty>
+                              }
+                           GetWithdrawLimit = 
+                              (Operation){
+                                 name = "GetWithdrawLimit"
+                                 tns[] = 
+                                    "tns",
+                                    "http://www.ctrip.com/cwallet/ws/tx",
+                                 input = 
+                                    (Message){
+                                       name = "GetWithdrawLimit"
+                                       qname = "(GetWithdrawLimit, http://www.ctrip.com/cwallet/ws/tx)"
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:GetWithdrawLimit">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'GetWithdrawLimit', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                    }
+                                 output = 
+                                    (Message){
+                                       name = "GetWithdrawLimitResponse"
+                                       qname = "(GetWithdrawLimitResponse, http://www.ctrip.com/cwallet/ws/tx)"
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:GetWithdrawLimitResponse">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'GetWithdrawLimitResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                    }
+                                 faults[] = <empty>
+                              }
+                           WithdrawSubmit = 
+                              (Operation){
+                                 name = "WithdrawSubmit"
+                                 tns[] = 
+                                    "tns",
+                                    "http://www.ctrip.com/cwallet/ws/tx",
+                                 input = 
+                                    (Message){
+                                       name = "WithdrawSubmit"
+                                       qname = "(WithdrawSubmit, http://www.ctrip.com/cwallet/ws/tx)"
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:WithdrawSubmit">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'WithdrawSubmit', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                    }
+                                 output = 
+                                    (Message){
+                                       name = "WithdrawSubmitResponse"
+                                       qname = "(WithdrawSubmitResponse, http://www.ctrip.com/cwallet/ws/tx)"
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:WithdrawSubmitResponse">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'WithdrawSubmitResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                    }
+                                 faults[] = <empty>
+                              }
+                           QueryRechargeRecordOverview = 
+                              (Operation){
+                                 name = "QueryRechargeRecordOverview"
+                                 tns[] = 
+                                    "tns",
+                                    "http://www.ctrip.com/cwallet/ws/tx",
+                                 input = 
+                                    (Message){
+                                       name = "QueryRechargeRecordOverview"
+                                       qname = "(QueryRechargeRecordOverview, http://www.ctrip.com/cwallet/ws/tx)"
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:QueryRechargeRecordOverview">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'QueryRechargeRecordOverview', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                    }
+                                 output = 
+                                    (Message){
+                                       name = "QueryRechargeRecordOverviewResponse"
+                                       qname = "(QueryRechargeRecordOverviewResponse, http://www.ctrip.com/cwallet/ws/tx)"
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:QueryRechargeRecordOverviewResponse">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'QueryRechargeRecordOverviewResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                    }
+                                 faults[] = <empty>
+                              }
+                           QueryWithdrawRecord = 
+                              (Operation){
+                                 name = "QueryWithdrawRecord"
+                                 tns[] = 
+                                    "tns",
+                                    "http://www.ctrip.com/cwallet/ws/tx",
+                                 input = 
+                                    (Message){
+                                       name = "QueryWithdrawRecord"
+                                       qname = "(QueryWithdrawRecord, http://www.ctrip.com/cwallet/ws/tx)"
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:QueryWithdrawRecord">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'QueryWithdrawRecord', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                    }
+                                 output = 
+                                    (Message){
+                                       name = "QueryWithdrawRecordResponse"
+                                       qname = "(QueryWithdrawRecordResponse, http://www.ctrip.com/cwallet/ws/tx)"
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:QueryWithdrawRecordResponse">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'QueryWithdrawRecordResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                    }
+                                 faults[] = <empty>
+                              }
+                           PayCutAccount = 
+                              (Operation){
+                                 name = "PayCutAccount"
+                                 tns[] = 
+                                    "tns",
+                                    "http://www.ctrip.com/cwallet/ws/tx",
+                                 input = 
+                                    (Message){
+                                       name = "PayCutAccount"
+                                       qname = "(PayCutAccount, http://www.ctrip.com/cwallet/ws/tx)"
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:PayCutAccount">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'PayCutAccount', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                    }
+                                 output = 
+                                    (Message){
+                                       name = "PayCutAccountResponse"
+                                       qname = "(PayCutAccountResponse, http://www.ctrip.com/cwallet/ws/tx)"
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:PayCutAccountResponse">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'PayCutAccountResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                    }
+                                 faults[] = <empty>
+                              }
+                        }
+                  }
+               soap = 
+                  (soap){
+                     style = "document"
+                  }
+            }
+         location = "http://10.2.6.244/tx_ws/services/TxService"
+         methods = 
+            {
+               PayRefundAccount = 
+                  (Method){
+                     name = "PayRefundAccount"
+                     location = "http://10.2.6.244/tx_ws/services/TxService"
+                     binding = 
+                        (binding){
+                           input = <suds.bindings.document.Document instance at 0x0000000002C3C908>
+                           output = <suds.bindings.document.Document instance at 0x0000000002C3C908>
+                        }
+                     soap = 
+                        (soap){
+                           action = """"
+                           style = "document"
+                           input = 
+                              (Input){
+                                 body = 
+                                    (Body){
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:PayRefundAccount">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'PayRefundAccount', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                       use = "literal"
+                                       namespace[] = 
+                                          "tns",
+                                          "http://www.ctrip.com/cwallet/ws/tx",
+                                       wrapped = True
+                                    }
+                                 headers[] = <empty>
+                              }
+                           output = 
+                              (Output){
+                                 body = 
+                                    (Body){
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:PayRefundAccountResponse">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'PayRefundAccountResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                       use = "literal"
+                                       namespace[] = 
+                                          "tns",
+                                          "http://www.ctrip.com/cwallet/ws/tx",
+                                       wrapped = True
+                                    }
+                                 headers[] = <empty>
+                              }
+                           faults[] = <empty>
+                        }
+                  }
+               QueryWithdrawRecord = 
+                  (Method){
+                     name = "QueryWithdrawRecord"
+                     location = "http://10.2.6.244/tx_ws/services/TxService"
+                     binding = 
+                        (binding){
+                           input = <suds.bindings.document.Document instance at 0x0000000002C3C908>
+                           output = <suds.bindings.document.Document instance at 0x0000000002C3C908>
+                        }
+                     soap = 
+                        (soap){
+                           action = """"
+                           style = "document"
+                           input = 
+                              (Input){
+                                 body = 
+                                    (Body){
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:QueryWithdrawRecord">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'QueryWithdrawRecord', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                       use = "literal"
+                                       namespace[] = 
+                                          "tns",
+                                          "http://www.ctrip.com/cwallet/ws/tx",
+                                       wrapped = True
+                                    }
+                                 headers[] = <empty>
+                              }
+                           output = 
+                              (Output){
+                                 body = 
+                                    (Body){
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:QueryWithdrawRecordResponse">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'QueryWithdrawRecordResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                       use = "literal"
+                                       namespace[] = 
+                                          "tns",
+                                          "http://www.ctrip.com/cwallet/ws/tx",
+                                       wrapped = True
+                                    }
+                                 headers[] = <empty>
+                              }
+                           faults[] = <empty>
+                        }
+                  }
+               PayUnfreezeAccount = 
+                  (Method){
+                     name = "PayUnfreezeAccount"
+                     location = "http://10.2.6.244/tx_ws/services/TxService"
+                     binding = 
+                        (binding){
+                           input = <suds.bindings.document.Document instance at 0x0000000002C3C908>
+                           output = <suds.bindings.document.Document instance at 0x0000000002C3C908>
+                        }
+                     soap = 
+                        (soap){
+                           action = """"
+                           style = "document"
+                           input = 
+                              (Input){
+                                 body = 
+                                    (Body){
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:PayUnfreezeAccount">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'PayUnfreezeAccount', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                       use = "literal"
+                                       namespace[] = 
+                                          "tns",
+                                          "http://www.ctrip.com/cwallet/ws/tx",
+                                       wrapped = True
+                                    }
+                                 headers[] = <empty>
+                              }
+                           output = 
+                              (Output){
+                                 body = 
+                                    (Body){
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:PayUnfreezeAccountResponse">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'PayUnfreezeAccountResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                       use = "literal"
+                                       namespace[] = 
+                                          "tns",
+                                          "http://www.ctrip.com/cwallet/ws/tx",
+                                       wrapped = True
+                                    }
+                                 headers[] = <empty>
+                              }
+                           faults[] = <empty>
+                        }
+                  }
+               QueryWithdrawRecordCount = 
+                  (Method){
+                     name = "QueryWithdrawRecordCount"
+                     location = "http://10.2.6.244/tx_ws/services/TxService"
+                     binding = 
+                        (binding){
+                           input = <suds.bindings.document.Document instance at 0x0000000002C3C908>
+                           output = <suds.bindings.document.Document instance at 0x0000000002C3C908>
+                        }
+                     soap = 
+                        (soap){
+                           action = """"
+                           style = "document"
+                           input = 
+                              (Input){
+                                 body = 
+                                    (Body){
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:QueryWithdrawRecordCount">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'QueryWithdrawRecordCount', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                       use = "literal"
+                                       namespace[] = 
+                                          "tns",
+                                          "http://www.ctrip.com/cwallet/ws/tx",
+                                       wrapped = True
+                                    }
+                                 headers[] = <empty>
+                              }
+                           output = 
+                              (Output){
+                                 body = 
+                                    (Body){
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:QueryWithdrawRecordCountResponse">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'QueryWithdrawRecordCountResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                       use = "literal"
+                                       namespace[] = 
+                                          "tns",
+                                          "http://www.ctrip.com/cwallet/ws/tx",
+                                       wrapped = True
+                                    }
+                                 headers[] = <empty>
+                              }
+                           faults[] = <empty>
+                        }
+                  }
+               QueryWithdrawRecordOverview = 
+                  (Method){
+                     name = "QueryWithdrawRecordOverview"
+                     location = "http://10.2.6.244/tx_ws/services/TxService"
+                     binding = 
+                        (binding){
+                           input = <suds.bindings.document.Document instance at 0x0000000002C3C908>
+                           output = <suds.bindings.document.Document instance at 0x0000000002C3C908>
+                        }
+                     soap = 
+                        (soap){
+                           action = """"
+                           style = "document"
+                           input = 
+                              (Input){
+                                 body = 
+                                    (Body){
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:QueryWithdrawRecordOverview">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'QueryWithdrawRecordOverview', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                       use = "literal"
+                                       namespace[] = 
+                                          "tns",
+                                          "http://www.ctrip.com/cwallet/ws/tx",
+                                       wrapped = True
+                                    }
+                                 headers[] = <empty>
+                              }
+                           output = 
+                              (Output){
+                                 body = 
+                                    (Body){
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:QueryWithdrawRecordOverviewResponse">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'QueryWithdrawRecordOverviewResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                       use = "literal"
+                                       namespace[] = 
+                                          "tns",
+                                          "http://www.ctrip.com/cwallet/ws/tx",
+                                       wrapped = True
+                                    }
+                                 headers[] = <empty>
+                              }
+                           faults[] = <empty>
+                        }
+                  }
+               GetRechargeRecordByReferenceNo = 
+                  (Method){
+                     name = "GetRechargeRecordByReferenceNo"
+                     location = "http://10.2.6.244/tx_ws/services/TxService"
+                     binding = 
+                        (binding){
+                           input = <suds.bindings.document.Document instance at 0x0000000002C3C908>
+                           output = <suds.bindings.document.Document instance at 0x0000000002C3C908>
+                        }
+                     soap = 
+                        (soap){
+                           action = """"
+                           style = "document"
+                           input = 
+                              (Input){
+                                 body = 
+                                    (Body){
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:GetRechargeRecordByReferenceNo">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'GetRechargeRecordByReferenceNo', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                       use = "literal"
+                                       namespace[] = 
+                                          "tns",
+                                          "http://www.ctrip.com/cwallet/ws/tx",
+                                       wrapped = True
+                                    }
+                                 headers[] = <empty>
+                              }
+                           output = 
+                              (Output){
+                                 body = 
+                                    (Body){
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:GetRechargeRecordByReferenceNoResponse">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'GetRechargeRecordByReferenceNoResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                       use = "literal"
+                                       namespace[] = 
+                                          "tns",
+                                          "http://www.ctrip.com/cwallet/ws/tx",
+                                       wrapped = True
+                                    }
+                                 headers[] = <empty>
+                              }
+                           faults[] = <empty>
+                        }
+                  }
+               WithdrawSubmitByReferenceNo = 
+                  (Method){
+                     name = "WithdrawSubmitByReferenceNo"
+                     location = "http://10.2.6.244/tx_ws/services/TxService"
+                     binding = 
+                        (binding){
+                           input = <suds.bindings.document.Document instance at 0x0000000002C3C908>
+                           output = <suds.bindings.document.Document instance at 0x0000000002C3C908>
+                        }
+                     soap = 
+                        (soap){
+                           action = """"
+                           style = "document"
+                           input = 
+                              (Input){
+                                 body = 
+                                    (Body){
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:WithdrawSubmitByReferenceNo">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'WithdrawSubmitByReferenceNo', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                       use = "literal"
+                                       namespace[] = 
+                                          "tns",
+                                          "http://www.ctrip.com/cwallet/ws/tx",
+                                       wrapped = True
+                                    }
+                                 headers[] = <empty>
+                              }
+                           output = 
+                              (Output){
+                                 body = 
+                                    (Body){
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:WithdrawSubmitByReferenceNoResponse">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'WithdrawSubmitByReferenceNoResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                       use = "literal"
+                                       namespace[] = 
+                                          "tns",
+                                          "http://www.ctrip.com/cwallet/ws/tx",
+                                       wrapped = True
+                                    }
+                                 headers[] = <empty>
+                              }
+                           faults[] = <empty>
+                        }
+                  }
+               SaveRechargeResult = 
+                  (Method){
+                     name = "SaveRechargeResult"
+                     location = "http://10.2.6.244/tx_ws/services/TxService"
+                     binding = 
+                        (binding){
+                           input = <suds.bindings.document.Document instance at 0x0000000002C3C908>
+                           output = <suds.bindings.document.Document instance at 0x0000000002C3C908>
+                        }
+                     soap = 
+                        (soap){
+                           action = """"
+                           style = "document"
+                           input = 
+                              (Input){
+                                 body = 
+                                    (Body){
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:SaveRechargeResult">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'SaveRechargeResult', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                       use = "literal"
+                                       namespace[] = 
+                                          "tns",
+                                          "http://www.ctrip.com/cwallet/ws/tx",
+                                       wrapped = True
+                                    }
+                                 headers[] = <empty>
+                              }
+                           output = 
+                              (Output){
+                                 body = 
+                                    (Body){
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:SaveRechargeResultResponse">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'SaveRechargeResultResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                       use = "literal"
+                                       namespace[] = 
+                                          "tns",
+                                          "http://www.ctrip.com/cwallet/ws/tx",
+                                       wrapped = True
+                                    }
+                                 headers[] = <empty>
+                              }
+                           faults[] = <empty>
+                        }
+                  }
+               CreateRechargeOrder = 
+                  (Method){
+                     name = "CreateRechargeOrder"
+                     location = "http://10.2.6.244/tx_ws/services/TxService"
+                     binding = 
+                        (binding){
+                           input = <suds.bindings.document.Document instance at 0x0000000002C3C908>
+                           output = <suds.bindings.document.Document instance at 0x0000000002C3C908>
+                        }
+                     soap = 
+                        (soap){
+                           action = """"
+                           style = "document"
+                           input = 
+                              (Input){
+                                 body = 
+                                    (Body){
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:CreateRechargeOrder">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'CreateRechargeOrder', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                       use = "literal"
+                                       namespace[] = 
+                                          "tns",
+                                          "http://www.ctrip.com/cwallet/ws/tx",
+                                       wrapped = True
+                                    }
+                                 headers[] = <empty>
+                              }
+                           output = 
+                              (Output){
+                                 body = 
+                                    (Body){
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:CreateRechargeOrderResponse">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'CreateRechargeOrderResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                       use = "literal"
+                                       namespace[] = 
+                                          "tns",
+                                          "http://www.ctrip.com/cwallet/ws/tx",
+                                       wrapped = True
+                                    }
+                                 headers[] = <empty>
+                              }
+                           faults[] = <empty>
+                        }
+                  }
+               QueryRechargeRecord = 
+                  (Method){
+                     name = "QueryRechargeRecord"
+                     location = "http://10.2.6.244/tx_ws/services/TxService"
+                     binding = 
+                        (binding){
+                           input = <suds.bindings.document.Document instance at 0x0000000002C3C908>
+                           output = <suds.bindings.document.Document instance at 0x0000000002C3C908>
+                        }
+                     soap = 
+                        (soap){
+                           action = """"
+                           style = "document"
+                           input = 
+                              (Input){
+                                 body = 
+                                    (Body){
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:QueryRechargeRecord">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'QueryRechargeRecord', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                       use = "literal"
+                                       namespace[] = 
+                                          "tns",
+                                          "http://www.ctrip.com/cwallet/ws/tx",
+                                       wrapped = True
+                                    }
+                                 headers[] = <empty>
+                              }
+                           output = 
+                              (Output){
+                                 body = 
+                                    (Body){
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:QueryRechargeRecordResponse">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'QueryRechargeRecordResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                       use = "literal"
+                                       namespace[] = 
+                                          "tns",
+                                          "http://www.ctrip.com/cwallet/ws/tx",
+                                       wrapped = True
+                                    }
+                                 headers[] = <empty>
+                              }
+                           faults[] = <empty>
+                        }
+                  }
+               PayFreezeAccount = 
+                  (Method){
+                     name = "PayFreezeAccount"
+                     location = "http://10.2.6.244/tx_ws/services/TxService"
+                     binding = 
+                        (binding){
+                           input = <suds.bindings.document.Document instance at 0x0000000002C3C908>
+                           output = <suds.bindings.document.Document instance at 0x0000000002C3C908>
+                        }
+                     soap = 
+                        (soap){
+                           action = """"
+                           style = "document"
+                           input = 
+                              (Input){
+                                 body = 
+                                    (Body){
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:PayFreezeAccount">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'PayFreezeAccount', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                       use = "literal"
+                                       namespace[] = 
+                                          "tns",
+                                          "http://www.ctrip.com/cwallet/ws/tx",
+                                       wrapped = True
+                                    }
+                                 headers[] = <empty>
+                              }
+                           output = 
+                              (Output){
+                                 body = 
+                                    (Body){
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:PayFreezeAccountResponse">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'PayFreezeAccountResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                       use = "literal"
+                                       namespace[] = 
+                                          "tns",
+                                          "http://www.ctrip.com/cwallet/ws/tx",
+                                       wrapped = True
+                                    }
+                                 headers[] = <empty>
+                              }
+                           faults[] = <empty>
+                        }
+                  }
+               PayCutAccount = 
+                  (Method){
+                     name = "PayCutAccount"
+                     location = "http://10.2.6.244/tx_ws/services/TxService"
+                     binding = 
+                        (binding){
+                           input = <suds.bindings.document.Document instance at 0x0000000002C3C908>
+                           output = <suds.bindings.document.Document instance at 0x0000000002C3C908>
+                        }
+                     soap = 
+                        (soap){
+                           action = """"
+                           style = "document"
+                           input = 
+                              (Input){
+                                 body = 
+                                    (Body){
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:PayCutAccount">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'PayCutAccount', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                       use = "literal"
+                                       namespace[] = 
+                                          "tns",
+                                          "http://www.ctrip.com/cwallet/ws/tx",
+                                       wrapped = True
+                                    }
+                                 headers[] = <empty>
+                              }
+                           output = 
+                              (Output){
+                                 body = 
+                                    (Body){
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:PayCutAccountResponse">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'PayCutAccountResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                       use = "literal"
+                                       namespace[] = 
+                                          "tns",
+                                          "http://www.ctrip.com/cwallet/ws/tx",
+                                       wrapped = True
+                                    }
+                                 headers[] = <empty>
+                              }
+                           faults[] = <empty>
+                        }
+                  }
+               GetWithdrawLimit = 
+                  (Method){
+                     name = "GetWithdrawLimit"
+                     location = "http://10.2.6.244/tx_ws/services/TxService"
+                     binding = 
+                        (binding){
+                           input = <suds.bindings.document.Document instance at 0x0000000002C3C908>
+                           output = <suds.bindings.document.Document instance at 0x0000000002C3C908>
+                        }
+                     soap = 
+                        (soap){
+                           action = """"
+                           style = "document"
+                           input = 
+                              (Input){
+                                 body = 
+                                    (Body){
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:GetWithdrawLimit">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'GetWithdrawLimit', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                       use = "literal"
+                                       namespace[] = 
+                                          "tns",
+                                          "http://www.ctrip.com/cwallet/ws/tx",
+                                       wrapped = True
+                                    }
+                                 headers[] = <empty>
+                              }
+                           output = 
+                              (Output){
+                                 body = 
+                                    (Body){
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:GetWithdrawLimitResponse">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'GetWithdrawLimitResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                       use = "literal"
+                                       namespace[] = 
+                                          "tns",
+                                          "http://www.ctrip.com/cwallet/ws/tx",
+                                       wrapped = True
+                                    }
+                                 headers[] = <empty>
+                              }
+                           faults[] = <empty>
+                        }
+                  }
+               WithdrawSubmit = 
+                  (Method){
+                     name = "WithdrawSubmit"
+                     location = "http://10.2.6.244/tx_ws/services/TxService"
+                     binding = 
+                        (binding){
+                           input = <suds.bindings.document.Document instance at 0x0000000002C3C908>
+                           output = <suds.bindings.document.Document instance at 0x0000000002C3C908>
+                        }
+                     soap = 
+                        (soap){
+                           action = """"
+                           style = "document"
+                           input = 
+                              (Input){
+                                 body = 
+                                    (Body){
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:WithdrawSubmit">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'WithdrawSubmit', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                       use = "literal"
+                                       namespace[] = 
+                                          "tns",
+                                          "http://www.ctrip.com/cwallet/ws/tx",
+                                       wrapped = True
+                                    }
+                                 headers[] = <empty>
+                              }
+                           output = 
+                              (Output){
+                                 body = 
+                                    (Body){
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:WithdrawSubmitResponse">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'WithdrawSubmitResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                       use = "literal"
+                                       namespace[] = 
+                                          "tns",
+                                          "http://www.ctrip.com/cwallet/ws/tx",
+                                       wrapped = True
+                                    }
+                                 headers[] = <empty>
+                              }
+                           faults[] = <empty>
+                        }
+                  }
+               QueryRechargeRecordOverview = 
+                  (Method){
+                     name = "QueryRechargeRecordOverview"
+                     location = "http://10.2.6.244/tx_ws/services/TxService"
+                     binding = 
+                        (binding){
+                           input = <suds.bindings.document.Document instance at 0x0000000002C3C908>
+                           output = <suds.bindings.document.Document instance at 0x0000000002C3C908>
+                        }
+                     soap = 
+                        (soap){
+                           action = """"
+                           style = "document"
+                           input = 
+                              (Input){
+                                 body = 
+                                    (Body){
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:QueryRechargeRecordOverview">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'QueryRechargeRecordOverview', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                       use = "literal"
+                                       namespace[] = 
+                                          "tns",
+                                          "http://www.ctrip.com/cwallet/ws/tx",
+                                       wrapped = True
+                                    }
+                                 headers[] = <empty>
+                              }
+                           output = 
+                              (Output){
+                                 body = 
+                                    (Body){
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:QueryRechargeRecordOverviewResponse">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'QueryRechargeRecordOverviewResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                       use = "literal"
+                                       namespace[] = 
+                                          "tns",
+                                          "http://www.ctrip.com/cwallet/ws/tx",
+                                       wrapped = True
+                                    }
+                                 headers[] = <empty>
+                              }
+                           faults[] = <empty>
+                        }
+                  }
+               QueryRechargeRecordCount = 
+                  (Method){
+                     name = "QueryRechargeRecordCount"
+                     location = "http://10.2.6.244/tx_ws/services/TxService"
+                     binding = 
+                        (binding){
+                           input = <suds.bindings.document.Document instance at 0x0000000002C3C908>
+                           output = <suds.bindings.document.Document instance at 0x0000000002C3C908>
+                        }
+                     soap = 
+                        (soap){
+                           action = """"
+                           style = "document"
+                           input = 
+                              (Input){
+                                 body = 
+                                    (Body){
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:QueryRechargeRecordCount">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'QueryRechargeRecordCount', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                       use = "literal"
+                                       namespace[] = 
+                                          "tns",
+                                          "http://www.ctrip.com/cwallet/ws/tx",
+                                       wrapped = True
+                                    }
+                                 headers[] = <empty>
+                              }
+                           output = 
+                              (Output){
+                                 body = 
+                                    (Body){
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:QueryRechargeRecordCountResponse">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'QueryRechargeRecordCountResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                       use = "literal"
+                                       namespace[] = 
+                                          "tns",
+                                          "http://www.ctrip.com/cwallet/ws/tx",
+                                       wrapped = True
+                                    }
+                                 headers[] = <empty>
+                              }
+                           faults[] = <empty>
+                        }
+                  }
+               GetWithdrawRecordByReferenceNo = 
+                  (Method){
+                     name = "GetWithdrawRecordByReferenceNo"
+                     location = "http://10.2.6.244/tx_ws/services/TxService"
+                     binding = 
+                        (binding){
+                           input = <suds.bindings.document.Document instance at 0x0000000002C3C908>
+                           output = <suds.bindings.document.Document instance at 0x0000000002C3C908>
+                        }
+                     soap = 
+                        (soap){
+                           action = """"
+                           style = "document"
+                           input = 
+                              (Input){
+                                 body = 
+                                    (Body){
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:GetWithdrawRecordByReferenceNo">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'GetWithdrawRecordByReferenceNo', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                       use = "literal"
+                                       namespace[] = 
+                                          "tns",
+                                          "http://www.ctrip.com/cwallet/ws/tx",
+                                       wrapped = True
+                                    }
+                                 headers[] = <empty>
+                              }
+                           output = 
+                              (Output){
+                                 body = 
+                                    (Body){
+                                       parts[] = 
+                                          (Part){
+                                             root = <wsdl:part name="parameters" element="tns:GetWithdrawRecordByReferenceNoResponse">
+    </wsdl:part>
+                                             name = "parameters"
+                                             qname[] = 
+                                                "parameters",
+                                                "http://www.ctrip.com/cwallet/ws/tx",
+                                             element = "(u'GetWithdrawRecordByReferenceNoResponse', u'http://www.ctrip.com/cwallet/ws/tx')"
+                                             type = "None"
+                                          },
+                                       use = "literal"
+                                       namespace[] = 
+                                          "tns",
+                                          "http://www.ctrip.com/cwallet/ws/tx",
+                                       wrapped = True
+                                    }
+                                 headers[] = <empty>
+                              }
+                           faults[] = <empty>
+                        }
+                  }
+            }
+      },
+ }]]

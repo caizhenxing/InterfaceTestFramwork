@@ -1,0 +1,37 @@
+2014/07/31 14:14:22
+Request:
+{u'GetWithdrawLimitReq': {u'MerchantUid': 'wwwwww', u'MerchantId': 'CTRP'}}
+
+Response:
+(GetWithdrawLimitRsp){
+   ResponseHeader = 
+      (ResponseHeader){
+         ResultCode = "0"
+         Description = "成功！"
+      }
+   WithdrawLimitItems = 
+      (WithdrawLimitItems){
+         WithdrawLimitItem[] = 
+            (WithdrawLimitItem){
+               LimitType = 1
+               LimitFlag = 1
+               TotalAmount = 100000
+               RemainAmount = 100000
+            },
+            (WithdrawLimitItem){
+               LimitType = 2
+               LimitFlag = 1
+               TotalAmount = 200000
+               RemainAmount = 172698
+            },
+            (WithdrawLimitItem){
+               LimitType = 3
+               LimitFlag = 1
+               TotalAmount = 300000
+               RemainAmount = 262698
+            },
+      }
+   IsOverflow = 0
+ }
+
+

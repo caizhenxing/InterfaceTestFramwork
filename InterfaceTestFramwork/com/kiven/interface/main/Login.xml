@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<SOAP-ENV:Envelope xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cusdk="urn:cusdk" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<SOAP-ENV:Body>
+			<cusdk:Login>
+				<cusdk:req xsi:type="cusdk:LoginReq">
+					<userName>admin@xxxxxx</userName>
+					<password>888888</password>
+				</cusdk:req>
+			</cusdk:Login>
+		</SOAP-ENV:Body>
+	</SOAP-ENV:Envelope>
